@@ -23,8 +23,8 @@ const ObjImports = () => {
       houseContainer.traverse((child)=>{
         // console.log(child)
 
-        child.name === productSource.worldAssets.toggleRoofFLevelOpt1 && (child.visible=snap.hideRoofLevel)
-        child.name === productSource.worldAssets.toggleRoofFLevelOpt2 && (child.visible=snap.hideRoofLevel)
+        child.name === productSource.worldAssets.toggleRoofFLevelOpt1 && (child.visible=snap.showRoof)
+        child.name === productSource.worldAssets.toggleRoofFLevelOpt2 && (child.visible=snap.showRoof)
       })
 
       // console.log(productSource.worldAssets.toggleRoofFLevelOpt1)

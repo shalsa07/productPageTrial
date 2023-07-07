@@ -4,9 +4,23 @@ import WorldBtn from '../worldBtn/WorldBtn'
 
 //back
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import state from '../../../stateManagement/store';
 
 const backBtn={
-    icons:<KeyboardBackspaceIcon className='icons'/>
+  icons:<KeyboardBackspaceIcon className='icons'/>,name:'back',clickFtn:()=>{
+    state.showWorldOptions=true
+    state.showLevelsOptions=false
+    state.showColoursOptions=false
+    state.showRoomsOptions=false
+    state.showRoof=true
+    // console.log('click')
+  },dblclickFtn:()=>{
+    state._3dModelState=false
+    state.showAR360Options=false
+    state.ArMode=false
+    state.showWorldOptions=false
+    // console.log('click')
+  }
 }
 
 const BackBtn = () => {

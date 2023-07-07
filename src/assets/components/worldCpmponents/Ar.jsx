@@ -3,21 +3,13 @@ import { Canvas } from '@react-three/fiber'
 import React, { Suspense, useContext, useEffect } from 'react'
 import { useSnapshot } from 'valtio'
 import state from '../../stateManagement/store'
+import ObjImports from './ObjImports'
 import { AppContext } from '../../stateManagement/AppContext'
 import { degToRad } from 'three/src/math/MathUtils'
-import Progress from './Progress'
-
-import ObjImports from './ObjImports'
-// const ObjImports=React.lazy(()=>{
-//     return import('./ObjImports')
-// })
-
 import {_360Container} from './_360Container'
-// const _360Container=React.lazy(()=>{
-//     return import('./_360Container')
-// })
+import { ARButton, XR } from '@react-three/xr'
 
-const WorldObjs = () => {
+const Ar = () => {
     const snap=useSnapshot(state)
     const {productSource}=useContext(AppContext)
 
@@ -27,22 +19,21 @@ const WorldObjs = () => {
     })
     
   return (
+    <>
+    <ARButton/>
     <Canvas
         camera={{position:productSource.worldAssets?.camPosition}}
     >
-        <Suspense fallback={<Progress/>}>
+        <Suspense>
+            <XR>
             <Environment files={productSource.worldAssets?.enviHdriMap}/>
             <ambientLight intensity={.5}/>
-            <OrbitControls
-                enablePan={false}
-                maxDistance={snap.maxDistance}
-                minDistance={snap.minDistance}
-                maxPolarAngle={degToRad(snap.maxPolarAngle)}
-            />
-            {snap._3dModelState ? <Suspense fallback={<Progress/>}><ObjImports/></Suspense> : <Suspense fallback={<Progress/>}><_360Container/></Suspense>}
+            <ObjImports/>
+            </XR>
         </Suspense>
     </Canvas>
+    </>
   )
 }
 
-export default WorldObjs
+export default Ar
