@@ -4,6 +4,8 @@ import { useSnapshot } from 'valtio'
 import state from './assets/stateManagement/store'
 import { theMontes } from './assets/theMontes'
 import { AppContext } from './assets/stateManagement/AppContext'
+import { mrEdwards } from './assets/mrEdwards'
+import ModelPage from './assets/components/modelPage/ModelPage'
 
 // import World from './assets/components/worldCpmponents/World'
 const World=React.lazy(()=>{
@@ -21,7 +23,7 @@ function App() {
       }}
     >
       <Suspense>
-        <World/>
+        <ModelPage/>
       </Suspense>
     </AppContext.Provider>
   )
