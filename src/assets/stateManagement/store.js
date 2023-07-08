@@ -17,8 +17,9 @@ const state=proxy({
 
     ArMode:false,
     _3dModelState:false,
-    showRoof:true,
+    showRoofLevel:true,
     showLevel:true,
+    showArrows:true,
     showAR360Options:false,
     showWorldOptions:false,
     showLevelsOptions:false,

@@ -12,7 +12,7 @@ const backBtn={
     state.showLevelsOptions=false
     state.showColoursOptions=false
     state.showRoomsOptions=false
-    state.showRoof=true
+    state.showRoofLevel=true
     // console.log('click')
   },dblclickFtn:()=>{
     state._3dModelState=false

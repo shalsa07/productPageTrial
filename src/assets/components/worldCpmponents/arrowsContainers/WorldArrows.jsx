@@ -32,6 +32,7 @@ const WorldArrows = () => {
            }else if(count<productSource.worldAssets._360s.length){
                 count--
            }
+           console.log('model options',countOptions)
            state.mapCount=count
 
         }else if(snap._3dModelState){
@@ -40,7 +41,8 @@ const WorldArrows = () => {
            }else if(countOptions<productSource.worldAssets.houses.length){
                 countOptions--
            }
-           state.optionCount=countOptions
+           console.log('model options',countOptions)
+        //    state.optionCount=countOptions
         }
     //    console.log(snap.camTarget)
     }
@@ -61,8 +63,8 @@ const WorldArrows = () => {
             }else if(countOptions=productSource.worldAssets.houses.length-1){
                 countOptions=0
             }
-            // console.log('model',count)
             state.optionCount=countOptions
+            console.log('model options',countOptions,snap.optionCount)
         }
     //    console.log(snap.camTarget)
     }

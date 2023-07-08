@@ -32,7 +32,7 @@ const WorldObjs = () => {
 
     // state.camPosition=productSource.worldAssets?.camPosition
 
-    console.log(snap.camPosition)
+    // console.log(snap.camPosition)
   return (
     <Canvas
         camera={{position:snap.camPosition}}

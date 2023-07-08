@@ -31,7 +31,7 @@ const World = () => {
       {snap._3dModelState ? <BackBtn/> : null}
       <OptionsBtn/>
       <WorldTitle/>
-      <WorldArrows/>
+      {snap.showArrows && <WorldArrows/>}
       <WorldMenuContainerAr360/>
       <WorldMenuContainer/>
       <WorldMenuContainerLevels/>

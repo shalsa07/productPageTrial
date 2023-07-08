@@ -39,17 +39,16 @@ const ObjImports = () => {
       houseContainer.traverse((child)=>{
         // console.log(child.name)
         // child.visible=false
-        child.name === productSource.worldAssets.toggleRoofFLevelOpt1 && (child.visible=snap.showRoof)
-        child.name === productSource.worldAssets.toggleRoofFLevelOpt2 && (child.visible=snap.showRoof)
-        // child.name === productSource.worldAssets.houses[snap.optionCount].name && (child.visible=false)
+        child.name === productSource.worldAssets.houses[snap.optionCount].name && (child.visible=false)
+
+        productSource.worldAssets.houses.forEach(element => {
+          child.name === element.toogleRoofLevel && (child.visible=snap.showRoofLevel)
+        });
+        
       })
+      console.log(snap.showRoofLevel)
 
-      // scene.scene.traverse((child)=>{
-      //   child.name === productSource.worldAssets.houses[snap.optionCount].name && (child.visible=true)
-      // })
-      // console.log(productSource.worldAssets.houses[snap.optionCount].name)
-
-    },[])
+    },[snap.showRoofLevel])
 
     // console.log(scene)
 
