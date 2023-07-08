@@ -22,16 +22,19 @@ const ObjImports = () => {
 
   const camera=scene.camera
 
-  useFrame(()=>{
-    // camera.position.set(snap.camPosition)
-  })
+  const [x,y,z]=snap.camPosition
+
+  scene.camera.position.set(x,y,z)
+  // useFrame(()=>{
+  //   // camera.position.set(snap.camPosition)
+  // })
 
   const {position,target}=useControls({
     position:{
         value:{x:0,y:0,z:0},
         step:.05
     }
-})
+  })
 
     useEffect(()=>{
       const houseContainer=refHouseContainer.current
@@ -46,16 +49,16 @@ const ObjImports = () => {
         });
         
       })
-      console.log(snap.showRoofLevel)
+      // console.log(snap.showRoofLevel)
 
-    },[snap.showRoofLevel])
+    },[snap.showRoofLevel,snap.roomCord,snap.camPosition])
 
-    // console.log(scene)
+    console.log(x,y,z)
 
   return (
     <group
-      // position={[position.x,position.y,position.z]}
-      position={snap.roomCord}
+      position={[position.x,position.y,position.z]}
+      // position={snap.roomCord}
     >
       <group ref={refHouseContainer}>
         {productSource.worldAssets.houses.map((model)=><GltfLoader key={model.name} path={model.path}/>)}

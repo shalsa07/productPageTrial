@@ -15,7 +15,7 @@ const WorldMenuContainerLevels = () => {
         {
             icons:<RoofingIcon className='icons'/>,name:'toggle roof',clickFtn:()=>{
                 state.showRoofLevel=!snap.showRoofLevel
-                console.log('clicked roof',snap.showRoofLevel)
+                // console.log('clicked roof',snap.showRoofLevel)
             }
         },
         // {
@@ -26,7 +26,7 @@ const WorldMenuContainerLevels = () => {
         // },
     ]
 
-    console.log(snap.showRoofLevel)
+    // console.log(snap.showRoofLevel)
   return (
     <div className='webgl_world_WorldMenuContainer' style={{bottom: snap.showLevelsOptions ? '10px' : '-80px'}}>
         {uiLevels.map((btns)=><WorldBtn key={btns.name} item={btns}/>)}

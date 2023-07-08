@@ -19,10 +19,11 @@ const WorldMenuContainerAr360 = () => {
               state._3dModelState=true
               state.showWorldOptions=true
               state.showAR360Options=false
-              state.maxDist=60
-              state.minDist=20
-              state.camTarget=[0,0,-1]
-              state.camPosition=[30,-20,60]
+              state.maxDist=.5
+              state.minDist=.1
+              state.camTarget=[0,0,0]
+              state.camPosition=[0,0,0]
+              // state.roomCord=
               
               productSource.worldAssets.houses.length-1 === 0 && (state.showArrows=false)
   
