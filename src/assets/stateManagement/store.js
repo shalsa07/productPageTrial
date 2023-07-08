@@ -1,8 +1,9 @@
 import { proxy, useSnapshot } from "valtio";
 
 const state=proxy({
-    camTarget:[0,0,-1],
-    camPosition:[20,10,40],
+    camPosition:[0,0,0],
+
+    orbitTarget:[0,0,-1],
 
     roomCord:[-6.79,0,2.5],
     roomRot:0,

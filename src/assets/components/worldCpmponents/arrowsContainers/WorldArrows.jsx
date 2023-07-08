@@ -34,6 +34,7 @@ const WorldArrows = () => {
            }
            console.log('model options',countOptions)
            state.mapCount=count
+           state.orbitTarget=[0,0,-1]
 
         }else if(snap._3dModelState){
             if(countOptions === 0){
@@ -55,6 +56,7 @@ const WorldArrows = () => {
                 count=0
            }
            state.mapCount=count
+           state.orbitTarget=[0,0,-1]
 
         //    console.log('360')
         }else if(snap._3dModelState){

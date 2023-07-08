@@ -22,22 +22,16 @@ import { Camera } from '@mui/icons-material'
 const WorldObjs = () => {
     const snap=useSnapshot(state)
     const {productSource}=useContext(AppContext)
+    
+    // const {target}=useControls({
+    //   target:{
+    //     value:{x:0,y:0,z:0},
+    //     step:.05
+    //   }
+    // })
 
-    const {target}=useControls({
-        target:{
-            value:{x:0,y:0,z:0},
-            step:.05
-        }
-    })
-
-    // state.camPosition=productSource.worldAssets?.camPosition
-
-    // console.log(snap.camPosition)
   return (
-    <Canvas
-        camera={{position:snap.camPosition}}
-        // camera={{position:[snap.camPosition]}}
-    >
+    <Canvas>
         <Suspense fallback={<Progress/>}>
             <Environment files={productSource.worldAssets?.enviHdriMap}/>
             <ambientLight intensity={.5}/>
@@ -45,12 +39,10 @@ const WorldObjs = () => {
                 enablePan={false}
                 maxDistance={snap.maxDist}
                 minDistance={snap.minDist}
-                // maxPolarAngle={degToRad(snap.maxPolarAngle)}
-                // minPolarAngle={degToRad(snap.minPolarAngle)}
                 dampingFactor={.1}
                 enableDamping={true}
+                target={snap.orbitTarget}
                 // target={[target.x,target.y,target.z]}
-                target={snap.camTarget}
             />
             {snap._3dModelState ? <Suspense fallback={<Progress/>}><ObjImports/></Suspense> : <Suspense fallback={<Progress/>}><_360Container/></Suspense>}
         </Suspense>

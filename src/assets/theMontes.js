@@ -225,7 +225,7 @@ const theMontes={
         
         houses:[
             {name:'house_opt1',path:'./assets/themontes/house_Opt1.glb',toogleRoofLevel:"house_opt1_roof"},
-            {name:'house_opt2',path:'./assets/themontes/house_Opt2.glb',toogleRoofLevel:"house_opt2_roof"},
+            // {name:'house_opt2',path:'./assets/themontes/house_Opt2.glb',toogleRoofLevel:"house_opt2_roof"},
         ],
     
         placeHolder:{name:'option2House',path:'./assets/themontes/house_Opt2.glb'},

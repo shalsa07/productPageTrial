@@ -13,18 +13,24 @@ const backBtn={
     state.showColoursOptions=false
     state.showRoomsOptions=false
     state.showRoofLevel=true
+    state.maxDist=50
+    state.minDist=20
+    state.camTarget=[0,0,0]
+    state.camPosition=[20,10,25]
+    state.roomCord=[-6.79,0,14]
     // console.log('click')
   },dblclickFtn:()=>{
+    state.showArrows=true
     state._3dModelState=false
     state.showAR360Options=false
     state.ArMode=false
     state.showWorldOptions=false
-    state.maxDist=.5
-    state.minDist=.1
+    state.maxDist=.05
+    state.minDist=.01
     // state.maxPolarAngle=110,
     // state.minPolarAngle=60,
-    state.camTarget=[0,0,-1]
-    state.camPosition=[15,5,20]
+    state.camTarget=[1,0,-1]
+    state.camPosition=[0,0,0]
     // console.log('click')
   }
 }
