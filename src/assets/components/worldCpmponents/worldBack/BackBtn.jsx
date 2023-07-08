@@ -19,6 +19,12 @@ const backBtn={
     state.showAR360Options=false
     state.ArMode=false
     state.showWorldOptions=false
+    state.maxDist=.5
+    state.minDist=.1
+    // state.maxPolarAngle=110,
+    // state.minPolarAngle=60,
+    state.camTarget=[0,0,-1]
+    state.camPosition=[15,5,20]
     // console.log('click')
   }
 }

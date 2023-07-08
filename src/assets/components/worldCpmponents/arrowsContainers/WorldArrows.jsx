@@ -23,25 +23,48 @@ const WorldArrows = () => {
     const refArrowsContainer=useRef()
 
     let count=0
+    let countOptions=0
 
     const btnLeft=()=>{
-        if(count === 0){
-            count=productSource.worldAssets._360s.length-1
-       }else if(count<productSource.worldAssets._360s.length){
-            count--
-       }
-       state.mapCount=count
-       console.log(count)
+        if(!snap.showAR360Options){
+            if(count === 0){
+                count=productSource.worldAssets._360s.length-1
+           }else if(count<productSource.worldAssets._360s.length){
+                count--
+           }
+           state.mapCount=count
+
+        }else if(snap._3dModelState){
+            if(countOptions === 0){
+                countOptions=productSource.worldAssets.houses.length-1
+           }else if(countOptions<productSource.worldAssets.houses.length){
+                countOptions--
+           }
+           state.optionCount=countOptions
+        }
+    //    console.log(snap.camTarget)
     }
 
     const btnRight=()=>{
-        if(count<productSource.worldAssets._360s.length-1){
-            count++
-       }else if(count=productSource.worldAssets._360s.length-1){
-            count=0
-       }
-       state.mapCount=count
-       console.log(count)
+        if(!snap._3dModelState){
+            if(count<productSource.worldAssets._360s.length-1){
+                count++
+           }else if(count=productSource.worldAssets._360s.length-1){
+                count=0
+           }
+           state.mapCount=count
+
+        //    console.log('360')
+        }else if(snap._3dModelState){
+            if(countOptions<productSource.worldAssets.houses.length-1){
+                countOptions++
+            }else if(countOptions=productSource.worldAssets.houses.length-1){
+                countOptions=0
+            }
+            // console.log('model',count)
+            state.optionCount=countOptions
+        }
+    //    console.log(snap.camTarget)
     }
 
     useEffect(()=>{
@@ -55,11 +78,11 @@ const WorldArrows = () => {
                 switch (index) {
                     case 0:
                         btnLeft()
-                        console.log('click btn',index,count)
+                        // console.log('click btn',index,count)
                         break;
                     case 1:
                         btnRight()
-                        console.log('click btn',index,count)
+                        // console.log('click btn',index,count)
                         break;
                 
                     default:

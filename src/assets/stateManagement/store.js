@@ -1,14 +1,19 @@
 import { proxy, useSnapshot } from "valtio";
 
 const state=proxy({
+    camTarget:[0,0,-1],
+    camPosition:[20,10,40],
 
-    camPosition:[0,0,0],
-    roomCord:[0,0,0],
+    roomCord:[-6.79,0,2.5],
     roomRot:0,
 
+    optionCount:1,
+
     mapCount:0,
-    minDistance:0,
-    maxPolarAngle:85,
+    minDist:.1,
+    maxDist:.5,
+    maxPolarAngle:110,
+    minPolarAngle:60,
 
     ArMode:false,
     _3dModelState:false,

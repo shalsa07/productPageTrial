@@ -10,18 +10,24 @@ import state from '../../../stateManagement/store';
 
 const uiLevels=[
     {
-        icons:<ThreeDRotationIcon className='icons'/>,name:'ar',clickFtn:()=>{
+        icons:<ThreeDRotationIcon className='icons'/>,name:'3d model',clickFtn:()=>{
             state._3dModelState=true
             state.showWorldOptions=true
             state.showAR360Options=false
+            state.maxDist=60
+            state.minDist=20
+            state.camTarget=[0,0,-1]
+            state.camPosition=[30,-20,60]
+
             // console.log('click')
           }
     },
     {
-        icons:<ViewInArIcon className='icons'/>,name:'3d model',clickFtn:()=>{
+        icons:<ViewInArIcon className='icons'/>,name:'ar',clickFtn:()=>{
             state.ArMode=true
             state.showWorldOptions=true
             state.showAR360Options=false
+  
             // console.log('click')
           }
     },

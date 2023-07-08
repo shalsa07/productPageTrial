@@ -1,11 +1,13 @@
+@import '../../../../Global.module.scss';
+
 .webgl_world_WorldBtn{
     width: 40px;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.45);
-    // padding: 2.5px;
+    background-color: $btnBackgroundColor;
+    color: $backgroundColor;
     transition: all .35s ease;
     border-radius: 50%;
     cursor: pointer;

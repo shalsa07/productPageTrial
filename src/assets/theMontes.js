@@ -211,21 +211,21 @@ const theMontes={
             bedroom:[2.5,2,21],
         },    
             
-        camPosition:[15,5,25],
-
-        camTarget:[0,0,0],
+        camPosition:[20,20,60],
+        camTarget:[0,0,5],
 
         roomCord:[-6.75,0,14],
-
         roomRotation:[0],
 
-        minDist:[25],
+        maxPolarAngle:.5,
+        minPolarAngle:.1    ,
 
-        maxDist:[40],
+        maxDist:[0.5],
+        minDist:[0.1],
         
         houses:[
-            // {name:'option1House',path:'./assets/themontes/house_Opt1.glb',toogleRoofName:'house_opt1_roof'},
-            {name:'option2House',path:'./assets/themontes/house_Opt2.glb',toogleRoofName:'house_opt2_roof'},
+            {name:'house_opt1',path:'./assets/themontes/house_Opt1.glb',toogleRoofName:'house_opt1_roof'},
+            // {name:'house_opt2',path:'./assets/themontes/house_Opt2.glb',toogleRoofName:'house_opt2_roof'},
         ],
     
         placeHolder:{name:'option2House',path:'./assets/themontes/house_Opt2.glb'},

@@ -28,16 +28,15 @@ const World = () => {
   const snap=useSnapshot(state)
   return (
     <div className='webgl_world'>
-        <BackBtn/>
-        <OptionsBtn/>
-        <WorldTitle/>
-        <WorldArrows/>
-        <WorldMenuContainerAr360/>
-        <WorldMenuContainer/>
-        <WorldMenuContainerLevels/>
-        <WorldMenuContainerRooms/>
-      {/* <div className="webgl_world_Container">
-      </div> */}
+      {snap._3dModelState ? <BackBtn/> : null}
+      <OptionsBtn/>
+      <WorldTitle/>
+      <WorldArrows/>
+      <WorldMenuContainerAr360/>
+      <WorldMenuContainer/>
+      <WorldMenuContainerLevels/>
+      <WorldMenuContainerRooms/>
+ 
       {snap.ArMode ? <Suspense><Ar/></Suspense> : <Suspense><WorldObjs/></Suspense>}
     </div>
   )

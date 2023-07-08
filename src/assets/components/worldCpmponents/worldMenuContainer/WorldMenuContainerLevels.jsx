@@ -10,41 +10,24 @@ import state from '../../../stateManagement/store';
 
 const uiLevels=[
     {
-        icons:<RoofingIcon className='icons'/>
+        icons:<RoofingIcon className='icons'/>,name:'toggle roof',clickFtn:()=>{
+            state.showRoof=false
+            console.log('clicked roof')
+        }
     },
     // {
-    //     icons:<Filter1Icon className='icons'/>
+    //     icons:<Filter1Icon className='icons'/>,name:'toggle roof',name:'toggle 1st',clickFtn:()=>{
+    //         state.showLevel=!snap.showLevel
+    //         state.showWorldOptions=false
+    //     }
     // },
 ]
 
 const WorldMenuContainerLevels = () => {
-    const refBtnContainer=useRef()
     const snap=useSnapshot(state)
-    useEffect(()=>{
-        const btnContainerArray=[...refBtnContainer.current.children]
 
-        btnContainerArray.forEach((btn,index)=>{
-            btn.addEventListener('click',()=>{
-                index==0 && (state.showRoof=false)
-                index==1 && (state.showLevel=false)
-                
-                // switch (index) {
-                //     case 0:
-                //         state.showRoof=false
-                //         console.log('click btn',index,snap.showRoof)
-                //         break;
-                
-                //     default:
-                //         state.showRoof=true
-                //         break;
-                // }
-            })
-        })
-
-        console.log(btnContainerArray)
-    },[])
   return (
-    <div ref={refBtnContainer} className='webgl_world_WorldMenuContainer' style={{bottom: snap.showLevelsOptions ? '10px' : '-80px'}}>
+    <div className='webgl_world_WorldMenuContainer' style={{bottom: snap.showLevelsOptions ? '10px' : '-80px'}}>
         {uiLevels.map((btns)=><WorldBtn key={btns.name} item={btns}/>)}
     </div>
   )
