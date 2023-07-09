@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import './ModelPage.scss'
 import World from '../worldCpmponents/World'
 import NavBar from '../navBar/NavBar'
@@ -11,11 +11,36 @@ import LikeBtn from '../btnLike/BtnLike'
 import BtnShare from '../btnShare/BtnShare'
 import SectionWrap from '../sectionWrap/SectionWrap'
 import DownloadsEmail from '../downloadsContacts/DownloadsEmail'
+import Footer from '../footer/Footer'
+
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
 
 const ModelPage = () => {
   const {productSource}=useContext(AppContext)
+  const refSectionWrapper=useRef()
+  const refBtnLeft=useRef()
+  const refBtnRight=useRef()
+
+  useEffect(()=>{
+    let count=0
+    const btnLeft=refBtnLeft.current
+    const btnRight=refBtnRight.current
+    const sectionWrapper=refSectionWrapper.current
+    const sectionWrapperArray=[...refSectionWrapper.current.children]
+
+    btnLeft.addEventListener('click',()=>{
+      console.log('click left')
+    })
+
+    btnRight.addEventListener('çlick',()=>{
+      console.log('click right')
+    })
+
+    console.log(btnLeft,btnRight)
+  },[])
   // console.log(productSource.section[0].imgs)
   return (
     <>
@@ -32,8 +57,16 @@ const ModelPage = () => {
         </div>
 
         <section className="section_render_drawings_webgl_contaner">
-          {productSource.section?.map((section)=><SectionWrap key={section.id} item={section.imgs}/>)}
-          {/* <World/> */}
+          <div ref={refSectionWrapper} className="section_render_drawings_webgl_contaner_wrapper">
+            <div ref={refBtnLeft} className="section_arrows left">
+              <ArrowBackIosNewIcon className='icons'/>
+            </div>
+            <div ref={refBtnRight} className="section_arrows right">
+              <ArrowForwardIosIcon className='icons'/>
+            </div>
+            {productSource.section?.map((section)=><SectionWrap key=  {section.id} item={section.imgs}/>)}
+            <World/>
+          </div>
         </section>
 
         <section className='modelPage_desc'>
@@ -51,19 +84,22 @@ const ModelPage = () => {
                 </div>)}
               </div>
               <hr/>
+              <div className="modelPage_desc_outro">
+                <Text2 item={productSource.productText?.outro}/>
+              </div>
             </div>
             <div className="modelPage_desc_downloads">
-              <DownloadsEmail/>
+              <div className="modelPage_desc_downloads_container">
+                <DownloadsEmail/>
+              </div>
             </div>
           </div>
-          <div className="modelPage_desc_outro">
+          {/* <div className="modelPage_desc_outro">
             <Text2 item={productSource.productText?.outro}/>
-          </div>
+          </div> */}
         </section>
-        {/* <div className='webgl_Container'>
-            <World/>
-        </div> */}
       </div>
+      <Footer/>
     </>
   )
 }

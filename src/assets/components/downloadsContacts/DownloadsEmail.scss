@@ -1,7 +1,7 @@
 @import '../../../Global.module.scss';
 .downloadsContact_wrap{
     width: 100%;
-    height: 400px;
+    height: 100%;
     background-color: red;
     display: flex;
     flex-direction: column;
@@ -9,6 +9,7 @@
     align-items: center;
     border-radius: 8px;
     overflow: hidden;
+    // padding-top: 20px;
     -webkit-box-shadow: $section-webkit-box-shadow-thin;
     -moz-box-shadow: $section-moz-box-shadow-thin;
     box-shadow: $section-box-shadow-thin;
@@ -22,7 +23,7 @@
         align-items: center;
     }
     .contact{
-        flex: 2;
+        flex: 1.5;
         width: 100%;
         background-color: blueviolet;
         display: flex;

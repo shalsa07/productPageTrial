@@ -22,6 +22,7 @@ body {
   margin: 0;
   display: flex;
   position: relative;
-  height: 100vh;
-  height: auto;
+  box-sizing: border-box;
+  /* height: 100vh;
+  height: auto; */
 }

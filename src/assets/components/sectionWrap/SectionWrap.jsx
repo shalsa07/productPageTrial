@@ -4,7 +4,7 @@ import ImageContainer from '../images/ImageContainer'
 import { AppContext } from '../../stateManagement/AppContext'
 
 const SectionWrap = ({item}) => {
-    console.log(item)
+    // console.log(item)
   return (
     <div className='sectionWrap'>
         <div className="singleImage">

@@ -1,0 +1,12 @@
+@import '../../../Global.module.scss';
+.footer{
+    width: $appwidth_968;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    // padding-top: 20px;
+    background-color: $elementsBackgroundColor;
+    left: 0;right: 0;margin: 0 auto;
+}
