@@ -1,5 +1,5 @@
 import React,{ Suspense, useEffect, useState } from 'react'
-import './App.css'
+import './App.scss'
 import { useSnapshot } from 'valtio'
 import state from './assets/stateManagement/store'
 import { theMontes } from './assets/theMontes'

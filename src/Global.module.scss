@@ -1,3 +1,21 @@
-$btnBackgroundColor: rgba(0, 0, 0, 0.45);;
+//TEXT AND BUTTON COLORS
+$btnBackgroundColor: rgba(0, 0, 0, 0.45);
 $btnContainerbackgroundColor: rgba(86, 86, 86, 0.25);
 $colorWorldText: rgb(220, 220, 220);
+$hoverColorForBtns: rgba(0, 0, 0, 0.363);
+
+$elementsBackgroundColor: rgb(71, 71, 71);
+
+//SHADOWS USEDETAILS
+$-webkit-box-shadow-thin: 0px 0px 5px 1px rgba(0,0,0,0.5);
+$-moz-box-shadow-thin: 0px 0px 5px 1px rgba(0,0,0,0.5);
+$box-shadow-thin: 0px 0px 5px 1px rgba(0,0,0,0.5);
+
+//SHADOWS SECTION
+$section-webkit-box-shadow-thin: 0px 0px 15px 4px rgba(0,0,0,0.76);
+$section-moz-box-shadow-thin: 0px 0px 15px 4px rgba(0,0,0,0.76);
+$section-box-shadow-thin: 0px 0px 15px 4px rgba(0,0,0,0.76);
+
+//APP WIDTHS
+$appwidth_1024: 1024px;
+$appwidth_968: 968px;

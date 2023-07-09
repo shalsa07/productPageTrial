@@ -1,0 +1,48 @@
+.sectionWrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    flex: 1 0 100%;
+    // background-color: red;
+    gap: 10px;
+
+    .singleImage{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex: 2;
+        height: 100%;
+        // background-color: blue;
+        overflow: hidden;
+    }
+
+    .columnImage{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        flex: 1;
+        gap: 10px;
+        // background-color: green;
+        overflow: hidden;
+    }
+
+    .image_wrap{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .rowImage{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        flex: 1 0 100%;
+        gap: 10px;
+        // background-color: rgb(28, 0, 128);
+        overflow: hidden;
+    }
+}

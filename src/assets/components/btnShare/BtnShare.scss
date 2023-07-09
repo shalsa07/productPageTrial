@@ -1,0 +1,32 @@
+@import '../../../Global.module.scss';
+.share_Container{
+    width: auto;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5px 10px;
+    
+    &:hover{
+        border-radius: 20px;
+        background-color: $hoverColorForBtns;
+        cursor: pointer;
+    }
+    
+    .share_icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 0 20px;
+        height: 20px;
+    }
+
+    .share_text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: underline;
+        text-transform: capitalize;
+        font-weight: 300;
+    }
+}

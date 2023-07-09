@@ -1,0 +1,26 @@
+@import './Global.module.scss';
+#root {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  background-color: $elementsBackgroundColor;
+}
+
+.icons{
+    width: 100% !important;
+    height: 100% !important;
+    flex: 1 0;
+}
+
+.images{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+hr{
+  width: 100%;
+}

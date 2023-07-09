@@ -95,7 +95,7 @@ const theMontes={
     },
 
     productText:{
-        projectTite:{
+        projectTitle:{
             title:`Four Bedroom house`
         },
     
@@ -107,15 +107,7 @@ const theMontes={
             title:`3 bedroomhouse design`
         },
     
-        desc:{
-            title:'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
-        },
-    
-        parapgraph:{
-            title:'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
-        },
-    
-        specialFeatur:{
+        specialFeatures:{
             title:`bedrooms, breakfast - nook, maid’s room, walk-in pantry, formal dining, game/rec room, library/study, outdoor fireplace
         `},
     
@@ -192,7 +184,11 @@ const theMontes={
                         pitch:
                     `}
             },
-        ]
+        ],
+            
+        outro:{
+            title:'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
+        },
     },
 
     worldAssets:{
