@@ -18,3 +18,28 @@
     object-position: center;
     transition: all .35s ease;
 }
+
+.webgl_world_WorldMenuContainer_levels{
+    width: auto;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background-color: $btnContainerbackgroundColor;
+    padding: 10px;
+    gap: 10px;
+    z-index: 10;
+    object-position: center;
+    transition: all .35s ease;
+
+    @media screen and (max-width:420px) {
+        width: calc(100% - 80px);
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+}

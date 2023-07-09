@@ -85,7 +85,7 @@ const WorldMenuContainerRooms = () => {
     })
     // console.log(snap.camPosition)
     return (
-    <div className='webgl_world_WorldMenuContainer' style={{bottom: snap.showRoomsOptions ? '10px' : '-80px'}}>
+    <div className='webgl_world_WorldMenuContainer_levels' style={{bottom: snap.showRoomsOptions ? '10px' : '-80px'}}>
         <p style={{textTransform:'uppercase',fontWeight:'300',letterSpacing:'3px'}}>exterior</p>
         {uiExtRooms.map((btns)=><WorldBtn key={btns.name} item={btns}/>)}
         <p style={{textTransform:'uppercase',fontWeight:'300',letterSpacing:'3px'}}>interior</p>

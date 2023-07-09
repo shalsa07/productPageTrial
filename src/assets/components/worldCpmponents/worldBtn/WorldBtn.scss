@@ -11,6 +11,7 @@
     transition: all .35s ease;
     border-radius: 50%;
     cursor: pointer;
+    flex: 1 0 40px;
 
     &:hover{
         scale: 1.15;
