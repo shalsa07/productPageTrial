@@ -14,7 +14,6 @@ import ObjImports from './ObjImports'
 // })
 
 import {_360Container} from './_360Container'
-
 // const _360Container=React.lazy(()=>{
 //     return import('./_360Container')
 // })
@@ -44,7 +43,7 @@ const WorldObjs = () => {
                 target={snap.orbitTarget}
                 // target={[target.x,target.y,target.z]}
             />
-            {snap._3dModelState ? <Suspense fallback={<Progress/>}><ObjImports/></Suspense> : <Suspense fallback={<Progress/>}><_360Container/></Suspense>}
+            {snap._3dModelState ? <Suspense><ObjImports/></Suspense> : <Suspense><_360Container/></Suspense>}
         </Suspense>
     </Canvas>
   )

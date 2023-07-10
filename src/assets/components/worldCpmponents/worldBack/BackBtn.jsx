@@ -13,6 +13,7 @@ const backBtn={
     state.showColoursOptions=false
     state.showRoomsOptions=false
     state.showRoofLevel=true
+    state.showRoofLevel=false
     state.maxDist=50
     state.minDist=20
     state.camTarget=[0,0,0]

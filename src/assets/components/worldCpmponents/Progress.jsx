@@ -5,7 +5,7 @@ const Progress = () => {
     const {progress,total,errors}=useProgress()
   return (
     // <Html>{errors && progress/total}</Html>
-    <Html>loading...{progress.toFixed(2)}</Html>
+    <Html center>loading...{progress.toFixed(2)}</Html>
   )
 }
 

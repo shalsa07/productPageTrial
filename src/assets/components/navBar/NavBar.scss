@@ -6,12 +6,14 @@
     height: 60px;
     top: 0;
     left: 0;
+    right: 0;
     background-color: $elementsBackgroundColor;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
     z-index: 100;
+    margin: 0 auto;
     -webkit-box-shadow: $-webkit-box-shadow-thin;
     -moz-box-shadow: $-moz-box-shadow-thin;
     box-shadow: $box-shadow-thin;
@@ -28,5 +30,10 @@
         margin: 0 auto;
         border-radius: 30px;
         // background-color: $elementsBackgroundColor;
+            
+        @media screen and (max-width:$appwidth_567) {
+            width: calc(100% - 20px);
+            // width: 100%;
+        }
     }
 }

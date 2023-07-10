@@ -34,8 +34,8 @@ const World = () => {
       {snap.showArrows && <WorldArrows/>}
       <WorldMenuContainerAr360/>
       <WorldMenuContainer/>
-      <WorldMenuContainerLevels/>
-      <WorldMenuContainerRooms/>
+      {/* <WorldMenuContainerLevels/> */}
+      {/* <WorldMenuContainerRooms/> */}
  
       {snap.ArMode ? <Suspense><Ar/></Suspense> : <Suspense><WorldObjs/></Suspense>}
     </div>

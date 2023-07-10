@@ -9,4 +9,8 @@
     // padding-top: 20px;
     background-color: $elementsBackgroundColor;
     left: 0;right: 0;margin: 0 auto;
+
+    @media screen and (max-width:$appwidth_567) {
+        width: calc(100% - 20px);
+    }
 }

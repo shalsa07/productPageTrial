@@ -1,0 +1,107 @@
+@import '../../../Global.module.scss';
+.popup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.95);
+
+    .popup_wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:$appwidth_1024;
+        height: 100%;
+        position: relative;
+
+        @media screen and (max-width: $appwidth_567) {
+            width: calc(100% - 20px);
+        }
+
+        .popup_Info{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            flex: 1;
+    
+            .popu_text_info{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 80px;
+                position: relative;
+                left: 0;right: 0;
+                margin: 0 auto;
+            }
+            .share_wrap{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                position: relative;
+                // left: 0;right: 0;
+                // margin: 0 auto;
+            }
+        }
+    
+        .popup_images_container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 8;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            top: 0;bottom: 0;
+            margin: auto 0;
+
+            .popup_arrows{
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                top: 0;bottom: 0;
+                margin: auto 0;
+                background-color: $arrowBackgroundColor;
+                border-radius: 50%;
+                z-index: 5;
+                -webkit-box-shadow: $-webkit-box-shadow-thin;
+                -moz-box-shadow: $-moz-box-shadow-thin;
+                box-shadow: $box-shadow-thin;
+                transition: all .5s ease;
+                cursor: pointer;
+                padding: 5px;
+                z-index: 20;
+    
+                &:hover{
+                    scale: 1.15;
+                }
+            }
+    
+            .left{
+                left: 30px;
+            }
+    
+            .right{
+                right: 30px;
+            }
+    
+            .popup_images_wrapper{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                transition: all .25s ease;
+            }
+        }
+    }
+}

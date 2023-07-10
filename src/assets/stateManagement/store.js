@@ -15,8 +15,12 @@ const state=proxy({
     maxDist:.5,
     maxPolarAngle:110,
     minPolarAngle:60,
+    
+    imageCount:{title:0},
+    imageTotal:{title:0},
 
     ArMode:false,
+    popup:false,
     _3dModelState:false,
     showRoofLevel:true,
     showLevel:true,

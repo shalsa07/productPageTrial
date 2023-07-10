@@ -11,8 +11,8 @@ const GltfLoader=({path})=>{
   const {scene}=useGLTF(path)
   return(
     <primitive object={scene}/>
-  )
-}
+    )
+  }
 
 const ObjImports = () => {
   const snap=useSnapshot(state)
@@ -46,8 +46,8 @@ const ObjImports = () => {
 
       houseContainer.traverse((child)=>{
         // console.log(child.name)
-        // child.visible=false
-        child.name === productSource.worldAssets.houses[snap.optionCount]?.name && (child.visible=false)
+        child.visible=false
+        child.name === productSource.worldAssets.houses[snap.optionCount]?.name && (child.visible=true)
 
         productSource.worldAssets.houses.forEach(element => {
           child.name === element.toogleRoofLevel && (child.visible=snap.showRoofLevel)

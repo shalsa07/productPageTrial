@@ -86,7 +86,7 @@ const mrEdwards={
         desc:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis at alias illo porro et minus excepturi aperiam debitis quidem, veniam dolores explicabo totam tempore est dicta repellat ipsum ex sed?',
     },
 
-    camPosition:[-20,0,30],
+    camPosition:[20,0,30],
 
     camTarget:[0,0,-40],
 
@@ -109,7 +109,7 @@ const mrEdwards={
     },
 
     productText:{
-        projectTite:{
+        projectTitle:{
             title:`Four Bedroom house`
         },
     
@@ -118,18 +118,10 @@ const mrEdwards={
         },
     
         typeOfHouse:{
-            title:`4 bedroomhouse design`
+            title:`3 bedroomhouse design`
         },
     
-        desc:{
-            title:'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
-        },
-    
-        parapgraph:{
-            title:'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
-        },
-    
-        specialFeatur:{
+        specialFeatures:{
             title:`bedrooms, breakfast - nook, maid’s room, walk-in pantry, formal dining, game/rec room, library/study, outdoor fireplace
         `},
     
@@ -206,7 +198,11 @@ const mrEdwards={
                         pitch:
                     `}
             },
-        ]
+        ],
+            
+        outro:{
+            title:'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
+        },
     },
 
     worldAssets:{

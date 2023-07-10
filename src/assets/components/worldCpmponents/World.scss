@@ -7,6 +7,10 @@
     height: calc(100% - 60px);
     height: 100%;
     margin: auto;
+      
+    @media screen and (max-width:$appwidth_567) {
+        width: calc(100% - 20px);
+    }
 }
 
 .icons{

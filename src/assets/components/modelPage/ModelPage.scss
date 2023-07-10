@@ -13,6 +13,10 @@
     // padding: 20px;
     margin-top: 80px;
 
+    @media screen and (max-width:$appwidth_567) {
+        width: calc(100% - 20px);
+    }
+
     .share_section{
         width: 100%;
         display: flex;
@@ -24,8 +28,10 @@
         .share_wrap{
             display: flex;
             gap: 5px;
-            width: auto;
+            width: 100px;
             height: 30px;
+            align-items: center;
+            justify-content: flex-end;
         }
     }
 
@@ -44,43 +50,45 @@
             box-shadow: $section-box-shadow-thin;
         }
 
+        .section_arrows{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            top: 0;bottom: 0;
+            margin: auto 0;
+            background-color: $arrowBackgroundColor;
+            border-radius: 50%;
+            z-index: 5;
+            -webkit-box-shadow: $-webkit-box-shadow-thin;
+            -moz-box-shadow: $-moz-box-shadow-thin;
+            box-shadow: $box-shadow-thin;
+            transition: all .5s ease;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 20;
+
+            &:hover{
+                scale: 1.15;
+            }
+        }
+
+        .left{
+            left: 10px;
+        }
+
+        .right{
+            right: 10px;
+        }
+
         .section_render_drawings_webgl_contaner_wrapper{
             position: relative;
             width: 100%;
             height: 100%;
             display: flex;
-
-            .section_arrows{
-                position: absolute;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 30px;
-                height: 30px;
-                top: 0;bottom: 0;
-                margin: auto 0;
-                // background-color: red;
-                border-radius: 50%;
-                z-index: 5;
-                -webkit-box-shadow: $-webkit-box-shadow-thin;
-                -moz-box-shadow: $-moz-box-shadow-thin;
-                box-shadow: $box-shadow-thin;
-                transition: all .5s ease;
-                cursor: pointer;
-                padding: 5px;
-
-                &:hover{
-                    scale: 1.15;
-                }
-            }
-
-            .left{
-                left: 10px;
-            }
-
-            .right{
-                right: 10px;
-            }
+            transition: all .25s ease;
         }
     }
 

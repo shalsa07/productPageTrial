@@ -8,6 +8,11 @@ import { mrEdwards } from './assets/mrEdwards'
 import ModelPage from './assets/components/modelPage/ModelPage'
 import NavBar from './assets/components/navBar/NavBar'
 
+// import Popup from './assets/components/popup/Popup'
+const Popup=React.lazy(()=>{
+  return import('./assets/components/popup/Popup')
+})
+
 // import World from './assets/components/worldCpmponents/World'
 const World=React.lazy(()=>{
   return import('./assets/components/worldCpmponents/World')
@@ -17,6 +22,7 @@ let productSource=[]
 productSource=theMontes
 
 function App() {
+  const snap=useSnapshot(state)
   return (
     <AppContext.Provider
       value={{
@@ -24,6 +30,7 @@ function App() {
       }}
     >
       <Suspense>
+        {snap.popup && <Popup/>}
         <NavBar/>
         <ModelPage/>
       </Suspense>

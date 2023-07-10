@@ -20,7 +20,7 @@ const SectionWrap = ({item}) => {
                 <ImageContainer path={item[2]?.url}/>
             </div>
         </div>
-        <div className="columnImage">
+        <div className="columnImage two">
             <div className="image_wrap">
                 <ImageContainer path={item[3]?.url}/>
             </div>
