@@ -14,6 +14,7 @@ import ObjImports from './ObjImports'
 // })
 
 import {_360Container} from './_360Container'
+import PogressScreen from './PogressScreen'
 // const _360Container=React.lazy(()=>{
 //     return import('./_360Container')
 // })
@@ -22,12 +23,12 @@ const WorldObjs = () => {
     const snap=useSnapshot(state)
     const {productSource}=useContext(AppContext)
     
-    // const {target}=useControls({
-    //   target:{
-    //     value:{x:0,y:0,z:0},
-    //     step:.05
-    //   }
-    // })
+    const {target}=useControls({
+      target:{
+        value:{x:0,y:0,z:0},
+        step:.05
+      }
+    })
 
   return (
     <Canvas>

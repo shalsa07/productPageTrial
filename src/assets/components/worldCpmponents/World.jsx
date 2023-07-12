@@ -1,4 +1,4 @@
-import React, { Suspense, useContext } from 'react'
+import React, { Suspense, useContext, useEffect } from 'react'
 import './World.scss'
 import { theMontes } from '../../theMontes'
 import { AppContext } from '../../stateManagement/AppContext'
@@ -25,7 +25,12 @@ const WorldObjs=React.lazy(()=>{
 })
 
 const World = () => {
+  const {productSource}=useContext(AppContext)
   const snap=useSnapshot(state)
+  useEffect(()=>{
+    state.roomCord=productSource.worldAssets.roomCordsArray?.default
+    state.camPosition=productSource.worldAssets.camPosition
+  },[])
   return (
     <div className='webgl_world'>
       {snap._3dModelState ? <BackBtn/> : null}
@@ -34,8 +39,8 @@ const World = () => {
       {snap.showArrows && <WorldArrows/>}
       <WorldMenuContainerAr360/>
       <WorldMenuContainer/>
-      {/* <WorldMenuContainerLevels/> */}
-      {/* <WorldMenuContainerRooms/> */}
+      <WorldMenuContainerLevels/>
+      <WorldMenuContainerRooms/>
  
       {snap.ArMode ? <Suspense><Ar/></Suspense> : <Suspense><WorldObjs/></Suspense>}
     </div>

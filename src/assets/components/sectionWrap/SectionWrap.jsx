@@ -2,11 +2,15 @@ import React, { useContext } from 'react'
 import './SectionWrap.scss'
 import ImageContainer from '../images/ImageContainer'
 import { AppContext } from '../../stateManagement/AppContext'
+import state from '../../stateManagement/store'
 
 const SectionWrap = ({item}) => {
     // console.log(item)
   return (
-    <div className='sectionWrap'>
+    <div 
+        className='sectionWrap'
+        onDoubleClick={()=>{state.popup=true}}
+    >
         <div className="singleImage">
             <div className="image_wrap">
                 <ImageContainer path={item[0]?.url}/>

@@ -86,28 +86,6 @@ const mrEdwards={
         desc:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis at alias illo porro et minus excepturi aperiam debitis quidem, veniam dolores explicabo totam tempore est dicta repellat ipsum ex sed?',
     },
 
-    camPosition:[20,0,30],
-
-    camTarget:[0,0,-40],
-
-    roomCord:[0,0,-40],
-
-    roomRotation:[0],
-
-    minDist:[25],
-
-    maxDist:[60],
-
-    roomCord:{
-        driveway:[-14,-2,-16,180,-14,-2,-15],
-        pool:[0,-1,-19,180,-7,-1,10],
-        lounge:[15,-1,-20,180,-15,-1,15],
-        stairs:[14.-1,-11,180,-16,-1,9],
-        kitchen:[-11,-.6,6.5,0,-11,-.6,7.5],
-        bedroom:[-8,-4.6,0,-9,-4.6,1],
-        balcony:[13,-4.6,-11,180,13,-4.6,-9],
-    },
-
     productText:{
         projectTitle:{
             title:`Four Bedroom house`
@@ -207,10 +185,35 @@ const mrEdwards={
 
     worldAssets:{
         enviHdriMap:'./enviMap.hdr',
+
+        toggle1stFlr:'house_opt1_roof',
+        toggleRoofFLevelOpt1: 'house_opt1_roof',
+        toggleRoofFLevelOpt2: 'house_opt2_roof',
+
+        roomCordsArray:{
+            default:[-8,0,14],
+            driveway:[9,2,2],
+            pool:[6.66,2,25],
+            lounge:[11,2,23],
+            foyer:[5,2,11],
+            kitchen:[8.5,2,17],
+            bedroom:[2.5,2,21],
+        },    
+            
+        camPosition:[-20,5,-25],
+        orbitTarget:[0,0,-1],
+
+        roomCord:[-6.75,0,14],
+        roomRotation:[0],
+
+        maxPolarAngle:.5,
+        minPolarAngle:.1,
+
+        maxDist:[0.5],
+        minDist:[0.1],
         
         houses:[
-            {name:'option1House',path:'./assets/mredwards/house_Opt1.glb'},
-            // {name:'option2House',path:'./assets/mredwards/house_Opt2.glb'},
+            {name:'option1House',path:'./assets/mredwards/house_Opt1.glb',toogleRoofLevel:"house_opt1_roof"},
         ],
     
         placeHolder:{name:'option2House',path:'./assets/mredwards/house_Opt1.glb'},

@@ -199,6 +199,7 @@ const theMontes={
         toggleRoofFLevelOpt2: 'house_opt2_roof',
 
         roomCordsArray:{
+            default:[-6.79,0,14],
             driveway:[9,2,2],
             pool:[6.66,2,25],
             lounge:[11,2,23],
@@ -207,20 +208,19 @@ const theMontes={
             bedroom:[2.5,2,21],
         },    
             
-        camPosition:[20,20,60],
-        camTarget:[0,0,5],
+        camPosition:[20,20,25],
+        orbitTarget:[0,0,-1],
 
         roomCord:[-6.75,0,14],
         roomRotation:[0],
 
         maxPolarAngle:.5,
-        minPolarAngle:.1    ,
 
         maxDist:[0.5],
         minDist:[0.1],
         
         houses:[
-            {name:'house_opt1',path:'./assets/themontes/house_Opt1.glb',toogleRoofLevel:"house_opt1_roof"},
+            // {name:'house_opt1',path:'./assets/themontes/house_Opt1.glb',toogleRoofLevel:"house_opt1_roof"},
             {name:'house_opt2',path:'./assets/themontes/house_Opt2.glb',toogleRoofLevel:"house_opt2_roof"},
         ],
     
@@ -230,6 +230,7 @@ const theMontes={
             {name:'cars',path:'./assets/themontes/cars.glb'},
             {name:'vegetation',path:'./assets/themontes/vegetation.glb'},
             {name:'site',path:'./assets/themontes/site.glb'},
+            {name:'furniture',path:'./assets/themontes/house_Opt2_furn.glb'},
         ],
            
         _360s:[

@@ -158,6 +158,18 @@
         // }
     }
 
+    .webglWrap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100%;
+        // flex: 1 0 100%;
+        width: 100%;
+        // background-color: red;
+        gap: 10px;
+    }
+
     .webgl_Container{
         position: relative;
         overflow: hidden;

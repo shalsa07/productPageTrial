@@ -74,65 +74,59 @@ const ModelPage = () => {
   },[])
   // console.log(productSource.section[0].imgs)
   return (
-    <>
-      <div className='modelPage'>
-        <Title1 item={productSource.productText?.projectTitle}/>
+    <div className='modelPage'>
+      <Title1 item={productSource.productText?.projectTitle}/>
 
-        <div className='share_section'>
-          <Text1 item={productSource.productText?.typeOfDesign}/>
-          <div className="share_wrap">
-            <BtnLike/>
-            <BtnShare/>
+      <div className='share_section'>
+        <Text1 item={productSource.productText?.typeOfDesign}/>
+        <div className="share_wrap">
+          <BtnLike/>
+          <BtnShare/>
+        </div>
+      </div>
+
+      <section className="section_render_drawings_webgl_contaner">
+        <div ref={refBtnSectionLeft} className="section_arrows left">
+          <ArrowBackIosNewIcon className='icons'/>
+        </div>
+        <div ref={refBtnSectionRight} className="section_arrows right">
+          <ArrowForwardIosIcon className='icons'/>
+        </div>
+        <div ref={refSectionWrapper} className="section_render_drawings_webgl_contaner_wrapper">
+          {productSource.section?.map((section)=><Suspense key={section.id}><SectionWrap item={section.imgs}/></Suspense>)}
+          <div className="webglWrap">
+            <Suspense><World/></Suspense>
           </div>
         </div>
+      </section>
 
-        <section className="section_render_drawings_webgl_contaner">
-          <div ref={refBtnSectionLeft} className="section_arrows left">
-            <ArrowBackIosNewIcon className='icons'/>
-          </div>
-          <div ref={refBtnSectionRight} className="section_arrows right">
-            <ArrowForwardIosIcon className='icons'/>
-          </div>
-          <div ref={refSectionWrapper} 
-            onDoubleClick={()=>{state.popup=true}}
-            className="section_render_drawings_webgl_contaner_wrapper"
-          >
-            {productSource.section?.map((section)=><Suspense key={section.id}><SectionWrap item={section.imgs}/></Suspense>)}
-            <div className="sectionWrap">
-              <Suspense><World/></Suspense>
+      <section className='modelPage_desc'>
+        <div className="modelPage_details_download">
+          <div className="modelPage_desc_details">
+            <div className="modelPage_desc_intro">
+              <Title1 item={productSource.productText?.typeOfHouse}/>
+              <Text2 item={productSource.productText?.specialFeatures}/>
+            </div>
+            <hr/>
+            <div className="modelPage_desc_detail_wrap">
+              {productSource.productText?.houseSpaces.map((item)=><div key={item?.title} className="modelPage_desc_detail_wrap_items">
+                <Title2 item={item}/>
+                <Text2 item={item}/>
+              </div>)}
+            </div>
+            <hr/>
+            <div className="modelPage_desc_outro">
+              <Text2 item={productSource.productText?.outro}/>
             </div>
           </div>
-        </section>
-
-        <section className='modelPage_desc'>
-          <div className="modelPage_details_download">
-            <div className="modelPage_desc_details">
-              <div className="modelPage_desc_intro">
-                <Title1 item={productSource.productText?.typeOfHouse}/>
-                <Text2 item={productSource.productText?.specialFeatures}/>
-              </div>
-              <hr/>
-              <div className="modelPage_desc_detail_wrap">
-                {productSource.productText?.houseSpaces.map((item)=><div key={item?.title} className="modelPage_desc_detail_wrap_items">
-                  <Title2 item={item}/>
-                  <Text2 item={item}/>
-                </div>)}
-              </div>
-              <hr/>
-              <div className="modelPage_desc_outro">
-                <Text2 item={productSource.productText?.outro}/>
-              </div>
-            </div>
-            <div className="modelPage_desc_downloads">
-              <div className="modelPage_desc_downloads_container">
-                <DownloadsEmail/>
-              </div>
+          <div className="modelPage_desc_downloads">
+            <div className="modelPage_desc_downloads_container">
+              <DownloadsEmail/>
             </div>
           </div>
-        </section>
-      </div>
-      <Footer/>
-    </>
+        </div>
+      </section>
+    </div>
   )
 }
 

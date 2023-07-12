@@ -24,22 +24,21 @@ const WorldMenuContainerAr360 = () => {
               state.camTarget=[0,0,0]
               state.camPosition=[20,10,25]
               state.roomCord=[-6.79,0,14]
-              // state.roomCord=
               
               productSource.worldAssets.houses.length-1 === 0 && (state.showArrows=false)
   
               // console.log('click')
             }
       },
-      {
-          icons:<ViewInArIcon className='icons'/>,name:'ar',clickFtn:()=>{
-              state.ArMode=true
-              state.showWorldOptions=true
-              state.showAR360Options=false
+      // {
+      //     icons:<ViewInArIcon className='icons'/>,name:'ar',clickFtn:()=>{
+      //         state.ArMode=true
+      //         state.showWorldOptions=true
+      //         state.showAR360Options=false
     
-              // console.log('click')
-            }
-      },
+      //         // console.log('click')
+      //       }
+      // },
   ]
   return (
     <div className='webgl_world_WorldMenuContainer' style={{top: '70px', scale: snap.showAR360Options? '1' : '0',transition:'all .5s ease'}}>

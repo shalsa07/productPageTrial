@@ -7,6 +7,7 @@ import { AppContext } from './assets/stateManagement/AppContext'
 import { mrEdwards } from './assets/mrEdwards'
 import ModelPage from './assets/components/modelPage/ModelPage'
 import NavBar from './assets/components/navBar/NavBar'
+import Footer from './assets/components/footer/Footer'
 
 // import Popup from './assets/components/popup/Popup'
 const Popup=React.lazy(()=>{
@@ -32,7 +33,12 @@ function App() {
       <Suspense>
         {snap.popup && <Popup/>}
         <NavBar/>
-        <ModelPage/>
+        {snap.fullSrcn 
+          ? <div className="webglWrap">
+            <Suspense><World/></Suspense>
+          </div>
+          : <ModelPage/>}
+        <Footer/>
       </Suspense>
     </AppContext.Provider>
   )

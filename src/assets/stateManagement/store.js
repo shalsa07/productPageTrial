@@ -5,7 +5,7 @@ const state=proxy({
 
     orbitTarget:[0,0,-1],
 
-    roomCord:[-6.79,0,2.5],
+    roomCord:[0,0,0],
     roomRot:0,
 
     optionCount:1,
@@ -19,10 +19,11 @@ const state=proxy({
     imageCount:{title:0},
     imageTotal:{title:0},
 
+    fullSrcn:false,
     ArMode:false,
     popup:false,
     _3dModelState:false,
-    showRoofLevel:true,
+    showRoof:true,
     showLevel:true,
     showArrows:true,
     showAR360Options:false,

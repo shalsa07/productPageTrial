@@ -11,6 +11,7 @@ import WeekendOutlinedIcon from '@mui/icons-material/WeekendOutlined';
 import CountertopsOutlinedIcon from '@mui/icons-material/CountertopsOutlined';
 import BedOutlinedIcon from '@mui/icons-material/BedOutlined';
 import DeckOutlinedIcon from '@mui/icons-material/DeckOutlined';
+import LiveTvIcon from '@mui/icons-material/LiveTv';
 import { useSnapshot } from 'valtio';
 import state from '../../../stateManagement/store';
 import { AppContext } from '../../../stateManagement/AppContext';
@@ -25,16 +26,17 @@ const WorldMenuContainerRooms = () => {
     useEffect(()=>{
         uiExtRooms=[
             {
-                icons:<EmojiTransportationOutlinedIcon className='icons'/>,name:'driveway',clickFtn:()=>{
-                    state.camPosition=[-0.005,1.2,-0.01]
+                icons:<EmojiTransportationOutlinedIcon className='icons'/>,name:{title:'driveway'},clickFtn:()=>{
+                    state.camPosition=[0,1.2,0]
                     state.orbitTarget=[-.5,1.2,-1]
                     state.roomCord=[-9,0,2]
                     state.maxDist=.05
                     state.minDist=.01
+                    // state.textHighlight=uiExtRooms[0].name.title
                 }
             },
             {
-                icons:<PoolOutlinedIcon className='icons'/>,name:'poolside',clickFtn:()=>{
+                icons:<PoolOutlinedIcon className='icons'/>,name:{title:'poolside'},clickFtn:()=>{
                     state.camPosition=[0,1.2,0]
                     state.orbitTarget=[0,1.2,.01]
                     state.roomCord=[-7,0,27]
@@ -45,7 +47,7 @@ const WorldMenuContainerRooms = () => {
         ]
         uiIntRooms=[
             {
-                icons:<WeekendOutlinedIcon className='icons'/>,name:'lounge',clickFtn:()=>{
+                icons:<WeekendOutlinedIcon className='icons'/>,name:{title:'lounge'},clickFtn:()=>{
                     state.camPosition=[0,1.2,0]
                     state.orbitTarget=[.01,1.2,.002]
                     state.roomCord=[-12,0,22]
@@ -54,16 +56,16 @@ const WorldMenuContainerRooms = () => {
                   }
             },
             {
-                icons:<MeetingRoomIcon className='icons'/>,name:'foyer',clickFtn:()=>{
+                icons:<MeetingRoomIcon className='icons'/>,name:{title:'foyer'},clickFtn:()=>{
                     state.camPosition=[0,1.2,0]
-                    state.orbitTarget=[0,1.2,-.01]
-                    state.roomCord=[-5,0,11]
+                    state.orbitTarget=[0,1.2,.01]
+                    state.roomCord=[-5,0,14]
                     state.maxDist=.05
                     state.minDist=.01
                 }
             },
             {
-                icons:<CountertopsOutlinedIcon className='icons'/>,name:'kitchen',clickFtn:()=>{
+                icons:<CountertopsOutlinedIcon className='icons'/>,name:{title:'kitchen'},clickFtn:()=>{
                     state.camPosition=[0,1.2,0]
                     state.orbitTarget=[.01,1.2,.01]
                     state.roomCord=[-8,0,17]
@@ -72,7 +74,16 @@ const WorldMenuContainerRooms = () => {
                 }
             },
             {
-                icons:<BedOutlinedIcon className='icons'/>,name:'bedroom',clickFtn:()=>{
+                icons:<LiveTvIcon className='icons1'/>,name:{title:'media room'},clickFtn:()=>{
+                    state.camPosition=[0,1.2,0]
+                    state.orbitTarget=[-.01,1.2,0]
+                    state.roomCord=[-6.5,0,20]
+                    state.maxDist=.05
+                    state.minDist=.01
+                }
+            },
+            {
+                icons:<BedOutlinedIcon className='icons'/>,name:{title:'bedroom'},clickFtn:()=>{
                     state.camPosition=[0,1.2,0]
                     state.orbitTarget=[0,1.2,.1]
                     state.roomCord=[-1.5,0,22.5]
@@ -82,7 +93,7 @@ const WorldMenuContainerRooms = () => {
             },
         ]
     })
-    // console.log(snap.camPosition)
+    // console.log(uiExtRooms[0])
     return (
     <div className='webgl_world_WorldMenuContainer_levels' style={{bottom: snap.showRoomsOptions ? '10px' : '-80px'}}>
         <p style={{textTransform:'uppercase',fontWeight:'300',letterSpacing:'3px'}}>exterior</p>

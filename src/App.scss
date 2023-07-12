@@ -23,3 +23,21 @@
 hr{
   width: 100%;
 }
+
+.webglWrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100vh;
+  // top: 60px;
+  // height: calc(100vh - 60px);
+  width: 100%;
+
+  @media screen and (max-width: $appwidth_567) {
+    top: 60px;
+    height: calc(100vh - 60px);
+  }
+  // background-color: red;
+  // gap: 10px;
+}
