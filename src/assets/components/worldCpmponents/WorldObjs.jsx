@@ -8,7 +8,7 @@ import { degToRad } from 'three/src/math/MathUtils'
 import Progress from './Progress'
 import { useControls } from 'leva'
 
-import ObjImports from './ObjImports'
+import WorldObjImports from './WorldObjImports'
 // const ObjImports=React.lazy(()=>{
 //     return import('./ObjImports')
 // })
@@ -30,6 +30,8 @@ const WorldObjs = () => {
       }
     })
 
+    console.log(snap.orbitTarget)
+
   return (
     <Canvas>
         <Suspense fallback={<Progress/>}>
@@ -41,10 +43,10 @@ const WorldObjs = () => {
                 minDistance={snap.minDist}
                 dampingFactor={.1}
                 enableDamping={true}
-                target={snap.orbitTarget}
-                // target={[target.x,target.y,target.z]}
+                // target={snap.orbitTarget}
+                target={[target.x,target.y,target.z]}
             />
-            {snap._3dModelState ? <Suspense><ObjImports/></Suspense> : <Suspense><_360Container/></Suspense>}
+            {snap._3dModelState ? <Suspense><WorldObjImports/></Suspense> : <Suspense><_360Container/></Suspense>}
         </Suspense>
     </Canvas>
   )

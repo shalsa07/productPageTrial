@@ -14,7 +14,7 @@ const GltfLoader=({path})=>{
     )
   }
 
-const ObjImports = () => {
+const WorldObjImports = () => {
   const snap=useSnapshot(state)
   const {productSource}=useContext(AppContext)
   const refHouseContainer=useRef()
@@ -22,27 +22,22 @@ const ObjImports = () => {
 
   const camera=scene.camera
 
-  // console.log(snap.roomCord)
-
+  
   const [x,y,z]=snap.roomCord
   const [a,b,c]=snap.camPosition
-    
-    // const {position,camPosition}=useControls({
-    //   position:{
-    //     value:{x:0,y:0,z:0},
-    //     step:.05
-    //   },
-    //   camPosition:{
-    //     value:{x:0,y:0,z:0},
-    //     step:.05
-    //   },
-    // })
-
-    // console.log(a,b,c)
-
-    scene.camera.position.set(a,b,c)
-
-    // console.log(camera)
+  
+  const {position,camPosition}=useControls({
+      position:{
+      value:{x:0,y:0,z:0},
+      step:.05
+    },
+    camPosition:{
+      value:{x:0,y:0,z:0},
+      step:.05
+    },
+  })
+  
+  // console.log(a,b,c,x,y,z)
 
     useEffect(()=>{
       const houseContainer=refHouseContainer.current
@@ -50,18 +45,18 @@ const ObjImports = () => {
       houseContainer.traverse((child)=>{
         // console.log(child.name)
         // child.visible=false
-        child.name === productSource.worldAssets.houses[snap.optionCount]?.name && (child.visible=false)
+        // child.name === productSource.worldAssets.houses[snap.optionCount]?.name && (child.visible=false)
 
         productSource.worldAssets.houses.forEach(element => {
           child.name === element.toogleRoofLevel && (child.visible=snap.showRoof)
         });
         
       })
-      // console.log(snap.showRoofLevel)
+      console.log(productSource.worldAssets.houses[snap.optionCount]?.name)
 
     },[snap.showRoof,snap.roomCord,snap.camPosition])
 
-    // console.log(x,y,z,snap.roomCord[0],snap.roomCord[1],snap.roomCord[2])
+    // console.log(snap.roomCord,snap.camPosition)
 
   return (
     <group
@@ -78,4 +73,4 @@ const ObjImports = () => {
   )
 }
 
-export default ObjImports
+export default WorldObjImports

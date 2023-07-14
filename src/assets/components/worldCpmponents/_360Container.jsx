@@ -19,14 +19,14 @@ export const _360Container = () => {
     mapArrayPaths.push(element.url)
   })
 
-  const map=useTexture(productSource.worldAssets._360s[0].url)
+  // const map=useTexture(productSource.worldAssets._360s[0].url)
   mapArray=useTexture(mapArrayPaths)
   
   // console.log(mapArray,mapArrayPaths)
   return (
-    <mesh rotation={[0,degToRad(120),0]} scale={[1,1,-1]}>
+    <mesh rotation={[0,degToRad(90),0]} scale={[1,1,-1]}>
       <meshBasicMaterial map={mapArray[snap.mapCount]} side={BackSide}/>
-      <sphereGeometry args={[100,64,64]}/>
+      <sphereGeometry args={[200,64,64]}/>
     </mesh>
   )
 }

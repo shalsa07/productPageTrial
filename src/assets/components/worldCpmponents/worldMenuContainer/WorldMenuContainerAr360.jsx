@@ -22,8 +22,8 @@ const WorldMenuContainerAr360 = () => {
               state.maxDist=50
               state.minDist=20
               state.camTarget=[0,0,0]
-              state.camPosition=[20,10,25]
-              state.roomCord=[-6.79,0,14]
+              state.camPosition=productSource.worldAssets?.camPosition
+              state.roomCord=productSource.worldAssets.roomCordsArray?.default
               
               productSource.worldAssets.houses.length-1 === 0 && (state.showArrows=false)
   

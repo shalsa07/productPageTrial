@@ -31,6 +31,7 @@ const World = () => {
     state.roomCord=productSource.worldAssets.roomCordsArray?.default
     state.camPosition=productSource.worldAssets.camPosition
   },[])
+  // console.log(productSource.worldAssets.roomCordsArray?.default,productSource.worldAssets.camPosition,snap.camPosition,snap.roomCord)
   return (
     <div className='webgl_world'>
       {snap._3dModelState ? <BackBtn/> : null}

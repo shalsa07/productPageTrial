@@ -164,10 +164,14 @@
         align-items: center;
         position: relative;
         height: 100%;
-        // flex: 1 0 100%;
-        width: 100%;
+        flex: 1 0 100%;
+        // width: 100%;
         // background-color: red;
-        gap: 10px;
+        // gap: 10px;
+
+        @media screen and (max-width:$appwidth_567) {
+            top: 0;
+        }
     }
 
     .webgl_Container{

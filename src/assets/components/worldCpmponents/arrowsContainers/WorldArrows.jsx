@@ -26,48 +26,56 @@ const WorldArrows = () => {
     let countOptions=0
 
     const btnLeft=()=>{
-        if(!snap.showAR360Options){
-            if(count === 0){
-                count=productSource.worldAssets._360s.length-1
-           }else if(count<productSource.worldAssets._360s.length){
-                count--
-           }
-           console.log('model options',countOptions)
-           state.mapCount=count
-           state.orbitTarget=[0,0,-1]
+        count === 0 ? count=productSource.worldAssets._360s.length-1 : count--
 
-        }else if(snap._3dModelState){
-            if(countOptions === 0){
-                countOptions=productSource.worldAssets.houses.length-1
-           }else if(countOptions<productSource.worldAssets.houses.length){
-                countOptions--
-           }
-           console.log('model options',countOptions)
-        //    state.optionCount=countOptions
-        }
+        console.log(count)
+        // if(!snap.showAR360Options){
+        //     if(count === 0){
+        //         count=productSource.worldAssets._360s.length-1
+        //    }else if(count<productSource.worldAssets._360s.length){
+        //         count--
+        //    }
+        //    state.mapCount=count
+        //    //    state.orbitTarget=[5,0,0]
+        //    console.log('360 left',count)
+        // // console.log('360 left',count)
+
+        // }else if(snap._3dModelState){
+        //     if(countOptions === 0){
+        //         countOptions=productSource.worldAssets.houses.length-1
+        //    }else if(countOptions<productSource.worldAssets.houses.length){
+        //         countOptions--
+        //    }
+        //    console.log('model options',countOptions)
+        // //    state.optionCount=countOptions
+        // }
     //    console.log(snap.camTarget)
     }
 
     const btnRight=()=>{
-        if(!snap._3dModelState){
-            if(count<productSource.worldAssets._360s.length-1){
-                count++
-           }else if(count=productSource.worldAssets._360s.length-1){
-                count=0
-           }
-           state.mapCount=count
-           state.orbitTarget=[0,0,-1]
+        count < productSource.worldAssets._360s.length ? count++ : 0
 
-        //    console.log('360')
-        }else if(snap._3dModelState){
-            if(countOptions<productSource.worldAssets.houses.length-1){
-                countOptions++
-            }else if(countOptions=productSource.worldAssets.houses.length-1){
-                countOptions=0
-            }
-            state.optionCount=countOptions
-            console.log('model options',countOptions,snap.optionCount)
-        }
+        console.log(count,productSource.worldAssets._360s.length-1)
+        // if(!snap._3dModelState){
+        //     if(count<productSource.worldAssets._360s.length-1){
+        //         count++
+        //    }else if(count=productSource.worldAssets._360s.length-1){
+        //         count=0
+        //    }
+        //    state.mapCount=count
+        // //    state.orbitTarget=[5,0,0]
+        // console.log('360 right',count)
+
+        //    console.log('360 right',count)
+        // }else if(snap._3dModelState){
+        //     if(countOptions<productSource.worldAssets.houses.length-1){
+        //         countOptions++
+        //     }else if(countOptions=productSource.worldAssets.houses.length-1){
+        //         countOptions=0
+        //     }
+        //     state.optionCount=countOptions
+        //     console.log('model options',countOptions,snap.optionCount)
+        // }
     //    console.log(snap.camTarget)
     }
 
@@ -90,7 +98,8 @@ const WorldArrows = () => {
                         break;
                 
                     default:
-                        state.showRoof=true
+                        state.mapCount=0
+                        state.optionCount=0
                         break;
                 }
                 // console.log(btn,index)
@@ -98,7 +107,7 @@ const WorldArrows = () => {
         })
 
         // console.log(arrowsContainerArray)
-    })
+    },[snap.mapCount])
 
   return (
     <div ref={refArrowsContainer} className='webgl_world_Arrows' style={{bottom: snap._3dModelState ? '80px': '20px'}}>

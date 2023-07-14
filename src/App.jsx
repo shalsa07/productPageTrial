@@ -8,6 +8,7 @@ import { mrEdwards } from './assets/mrEdwards'
 import ModelPage from './assets/components/modelPage/ModelPage'
 import NavBar from './assets/components/navBar/NavBar'
 import Footer from './assets/components/footer/Footer'
+import Experience from './assets/components/worldCpmponents/Experience'
 
 // import Popup from './assets/components/popup/Popup'
 const Popup=React.lazy(()=>{
@@ -35,10 +36,10 @@ function App() {
         <NavBar/>
         {snap.fullSrcn 
           ? <div className="webglWrap">
-            <Suspense><World/></Suspense>
+            <Suspense><Experience/></Suspense>
           </div>
-          : <ModelPage/>}
-        <Footer/>
+          :<><ModelPage/><Footer/></>}
+        
       </Suspense>
     </AppContext.Provider>
   )

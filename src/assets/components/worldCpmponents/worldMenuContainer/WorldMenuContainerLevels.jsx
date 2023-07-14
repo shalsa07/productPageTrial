@@ -14,6 +14,7 @@ const WorldMenuContainerLevels = () => {
     const uiLevels=[
         {
             icons:<RoofingIcon className='icons'/>,name:'toggle roof',clickFtn:()=>{
+                // state.showRoof=false
                 state.showRoof=!snap.showRoof
                 // console.log('clicked roof',snap.showRoofLevel)
             }

@@ -192,6 +192,8 @@ const mrEdwards={
 
         roomCordsArray:{
             default:[-8,0,14],
+            road1:[9,2,2],
+            road2:[9,2,2],
             driveway:[9,2,2],
             pool:[6.66,2,25],
             lounge:[11,2,23],
@@ -200,10 +202,10 @@ const mrEdwards={
             bedroom:[2.5,2,21],
         },    
             
-        camPosition:[-20,5,-25],
+        camPosition:[-25,10,-25],
         orbitTarget:[0,0,-1],
 
-        roomCord:[-6.75,0,14],
+        roomCord:[-9,0,10],
         roomRotation:[0],
 
         maxPolarAngle:.5,
@@ -219,9 +221,10 @@ const mrEdwards={
         placeHolder:{name:'option2House',path:'./assets/mredwards/house_Opt1.glb'},
         
         supportFiles:[
-            // {name:'cars',path:'./assets/mredwards/cars.glb'},
-            // {name:'vegetation',path:'./assets/mredwards/vegetation.glb'},
+            {name:'cars',path:'./assets/mredwards/cars.glb'},
+            {name:'vegetation',path:'./assets/mredwards/vegetation.glb'},
             {name:'site',path:'./assets/mredwards/site.glb'},
+            {name:'site',path:'./assets/mredwards/house_Opt1_furn.glb'},
             
         ],
            
