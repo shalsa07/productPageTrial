@@ -6,7 +6,6 @@ const state=proxy({
     orbitTarget:[0,0,-0.7],
 
     roomCord:[0,0,0],
-    roomRot:0,
 
     optionCount:0,
 

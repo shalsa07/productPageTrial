@@ -1,3 +1,19 @@
+import React from 'react'
+
+//rooms menu
+import EmojiTransportationOutlinedIcon from '@mui/icons-material/EmojiTransportationOutlined';
+import PoolOutlinedIcon from '@mui/icons-material/PoolOutlined';
+import AddRoadIcon from '@mui/icons-material/AddRoad';
+import TimeToLeaveIcon from '@mui/icons-material/TimeToLeave';
+
+import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
+import WeekendOutlinedIcon from '@mui/icons-material/WeekendOutlined';
+import CountertopsOutlinedIcon from '@mui/icons-material/CountertopsOutlined';
+import BedOutlinedIcon from '@mui/icons-material/BedOutlined';
+import DeckOutlinedIcon from '@mui/icons-material/DeckOutlined';
+import LiveTvIcon from '@mui/icons-material/LiveTv';
+import state from './stateManagement/store';
+
 const theMontes={
 
     logoPng:'./logo.png',
@@ -205,39 +221,91 @@ const theMontes={
         toggleRoofFLevelOpt1: 'house_opt1_roof',
         toggleRoofFLevelOpt2: 'house_opt2_roof',
 
+        default:[-6.79,0,14],
+
         roomCordsArray:{
-            default:[-6.79,0,14],
-            driveway:{
-                roomCord:[-10,0,1],
-                camPosition:[0,1.2,0],
-                orbitTarget:[-.1,1.2,-.1],
+            ext:[
+            {
+                name:{title:'driveway'},
+                icons:<TimeToLeaveIcon className='icons'/>,
+                clickFtn:()=>{
+                    state.roomCord=[-10,0,1],
+                    state.camPosition=[0,1.2,0],
+                    state.orbitTarget=[-.1,1.2,-.1],
+                    state.maxDist=.05
+                    state.minDist=.01
+                }
             },
-            pool:{
-                roomCord:[-7.5,0,28],
-                camPosition:[0,1.2,0],
-                orbitTarget:[0,1.2,0.1],
+            {
+                name:{title:'pool area'},
+                icons:<PoolOutlinedIcon className='icons'/>,
+                clickFtn:()=>{
+                    state.roomCord=[-7.5,0,28],
+                    state.camPosition=[0,1.2,0],
+                    state.orbitTarget=[0,1.2,0.1],
+                    state.maxDist=.05
+                    state.minDist=.01
+                }
             },
-            lounge:{
-                roomCord:[-10,0,23.5],
-                camPosition:[0,1.2,0],
-                orbitTarget:[.1,1.2,.1],
-            },
-            foyer:{
-                roomCord:[5,0,11],
-                camPosition:[0,1.2,0],
-                orbitTarget:[0,1.2,-.1],
-            },
-            kitchen:{
-                roomCord:[-5.7,0,17.4],
-                camPosition:[0,1.2,0],
-                orbitTarget:[.1,1.2,.05],
-            },
-            bedroom:{
-                roomCord:[-1.35,0,23],
-                camPosition:[0,1.2,0],
-                orbitTarget:[0,1.2,.1],
-            },
-        },    
+        ],
+            int:[
+                {
+                    name:{title:'lounge'},
+                    icons:<WeekendOutlinedIcon className='icons'/>,
+                    clickFtn:()=>{
+                        state.roomCord=[-10,0,23.5],
+                        state.camPosition=[0,1.2,0],
+                        state.orbitTarget=[.1,1.2,.1],
+                        state.maxDist=.05
+                        state.minDist=.01
+                    }
+                },
+                {
+                    name:{title:'foyer'},
+                    icons:<MeetingRoomIcon className='icons'/>,
+                    clickFtn:()=>{
+                        state.roomCord=[-5,0,11],
+                        state.camPosition=[0,1.2,0],
+                        state.orbitTarget=[0,1.2,-.1],
+                        state.maxDist=.05
+                        state.minDist=.01
+                    }
+                },
+                {
+                    name:{title:'kitchen'},
+                    icons:<CountertopsOutlinedIcon className='icons'/>,
+                    clickFtn:()=>{
+                        state.roomCord=[-5.7,0,17.4],
+                        state.camPosition=[0,1.2,0],
+                        state.orbitTarget=[.1,1.2,.05],
+                        state.maxDist=.05
+                        state.minDist=.01
+                    }
+                },
+                {
+                    name:{title:'media room'},
+                    icons:<LiveTvIcon className='icons'/>,
+                    clickFtn:()=>{
+                        state.roomCord=[-6.8,0,19.8],
+                        state.camPosition=[0,1.2,0],
+                        state.orbitTarget=[-0.01,1.2,0],
+                        state.maxDist=.05
+                        state.minDist=.01
+                    }
+                },
+                {
+                    name:{title:'bedroom'},
+                    icons:<BedOutlinedIcon className='icons'/>,
+                    clickFtn:()=>{
+                        state.roomCord=[-1.35,0,23],
+                        state.camPosition=[0,1.2,0],
+                        state.orbitTarget=[0,1.2,.1],
+                        state.maxDist=.05
+                        state.minDist=.01
+                    }
+                },
+            ]
+        },   
             
         camPosition:[20,20,25],
         orbitTarget:[0,0,0],

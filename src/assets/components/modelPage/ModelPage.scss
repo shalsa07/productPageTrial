@@ -171,6 +171,8 @@
 
         @media screen and (max-width:$appwidth_567) {
             top: 0;
+            width: 100%;
+            // width: calc(100vh - 60px);
         }
     }
 

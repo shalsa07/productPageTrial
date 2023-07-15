@@ -35,7 +35,7 @@ function App() {
         {snap.popup && <Popup/>}
         <NavBar/>
         {snap.fullSrcn 
-          ? <div className="webglWrap">
+          ? <div className="webglWrap_Fullscrn">
             <Suspense><Experience/></Suspense>
           </div>
           :<><ModelPage/><Footer/></>}

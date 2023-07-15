@@ -14,13 +14,13 @@ import WorldArrows from './arrowsContainers/WorldArrows'
 
 const Experience = () => {
     const snap=useSnapshot(state)
-    const {productSource}=useContext(AppContext)
+    // const {productSource}=useContext(AppContext)
 
-    state.roomCord=productSource.worldAssets?.roomCordsArray.default
-    state.camPosition=productSource.worldAssets?.camPosition
+    // state.roomCord=productSource.worldAssets?.roomCordsArray.default
+    // state.camPosition=productSource.worldAssets?.camPosition
+    // state.maxDist=productSource.worldAssets?.maxDist
+    // state.minDist=productSource.worldAssets?.minDist
     // state.camPosition=productSource.worldAssets?.orbitTarget
-    state.maxDist=productSource.worldAssets?.maxDist
-    state.minDist=productSource.worldAssets?.minDist
 
   return (
     <>
@@ -32,7 +32,7 @@ const Experience = () => {
         <WorldMenuContainer/>
         <WorldMenuContainerLevels/>
         <WorldMenuContainerRooms/>
-        
+
         <ExperienceEnvi/>
     </>
   )

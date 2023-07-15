@@ -29,7 +29,7 @@ const WorldMenuContainerRooms = () => {
         uiExtRooms=[
             {
                 icons:<TimeToLeaveIcon className='icons'/>,name:{title:'driveway'},clickFtn:()=>{
-                    state.roomCord=productSource.worldAssets?.roomCordsArray.driveway.roomCord
+                    state.roomCord=productSource.worldAssets?.default
                     state.camPosition=productSource.worldAssets?.roomCordsArray.driveway.camPosition
                     state.orbitTarget=productSource.worldAssets?.roomCordsArray.driveway.orbitTarget
                     state.maxDist=.05
@@ -94,14 +94,19 @@ const WorldMenuContainerRooms = () => {
                 }
             },
         ]
+
+        // productSource.worldAssets.roomCordsArray.forEach(element => {
+        //     // console.log(element)
+        // });
     })
     // console.log(uiExtRooms[0])
     return (
     <div className='webgl_world_WorldMenuContainer_levels' style={{bottom: snap.showRoomsOptions ? '10px' : '-80px'}}>
         <p style={{textTransform:'uppercase',fontWeight:'300',letterSpacing:'3px'}}>exterior</p>
-        {uiExtRooms.map((btns)=><WorldBtn key={btns.name} item={btns}/>)}
+        {productSource.worldAssets?.roomCordsArray.ext.map((btns)=><div key={btns.name} className='worldBtn_wrap'><WorldBtn item={btns}/></div>)}
         <p style={{textTransform:'uppercase',fontWeight:'300',letterSpacing:'3px'}}>interior</p>
-        {uiIntRooms.map((btns)=><WorldBtn key={btns.name} item={btns}/>)}
+        {productSource.worldAssets?.roomCordsArray.int.map((btns)=><div key={btns.name} className='worldBtn_wrap'><WorldBtn item={btns}/></div>)}
+        {/* {uiIntRooms.map((btns)=><WorldBtn key={btns.name} item={btns}/>)} */}
     </div>
   )
 }

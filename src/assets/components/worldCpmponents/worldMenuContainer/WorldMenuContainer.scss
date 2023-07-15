@@ -37,6 +37,15 @@
     object-position: center;
     transition: all .35s ease;
 
+    .worldBtn_wrap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        flex: 1 0 40px;
+    }
+
     @media screen and (max-width:420px) {
         width: calc(100% - 80px);
         overflow-x: auto;

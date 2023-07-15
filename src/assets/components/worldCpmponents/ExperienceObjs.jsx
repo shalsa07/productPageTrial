@@ -46,6 +46,11 @@ const ExperienceObjs = () => {
         })
 
     useEffect(()=>{
+            
+        // state.roomCord=productSource.worldAssets?.default
+        // state.camPosition=productSource.worldAssets?.camPosition
+        // state.maxDist=productSource.worldAssets?.maxDist
+        // state.minDist=productSource.worldAssets?.minDist
         // models.camera.position.set(camPosition.x,camPosition.y,camPosition.z)
         snap.showRoomsOptions && models.camera.position.set(a,b,c)
 
@@ -54,6 +59,8 @@ const ExperienceObjs = () => {
                 obj.name === element.toogleRoofLevel && (obj.visible=snap.showRoof)
             })
         })
+
+        // console.log(snap.roomCord,snap.camPosition,snap.orbitTarget)
     })
 
     // console.log(models)

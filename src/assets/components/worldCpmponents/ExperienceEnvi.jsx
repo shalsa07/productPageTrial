@@ -7,6 +7,7 @@ import { AppContext } from '../../stateManagement/AppContext'
 import { useSnapshot } from 'valtio'
 import state from '../../stateManagement/store'
 import { useControls } from 'leva'
+import Experience360 from './worldMenuContainer/Experience360'
 
 const Envi = () => {
     const {productSource}=useContext(AppContext)
@@ -33,13 +34,13 @@ const ExperienceEnvi = () => {
     >
         <Suspense fallback={<Progress/>}>
             <Envi/>
-            <ExperienceObjs/>
             <OrbitControls
-                minDistance={snap.minDist}
-                maxDistance={snap.maxDist}
-                target={snap.orbitTarget}
-                // target={[target.x,target.y,target.z]}
+              minDistance={snap.minDist}
+              maxDistance={snap.maxDist}
+              target={snap.orbitTarget}
+              // target={[target.x,target.y,target.z]}
             />
+            {snap._3dModelState ? <ExperienceObjs/> : <Experience360/>}
         </Suspense>
     </Canvas>
   )
