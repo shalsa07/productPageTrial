@@ -6,6 +6,7 @@ const Progress = () => {
   return (
     // <Html>{errors && progress/total}</Html>
     <Html 
+      position={[0,0,0]}
       style={{zIndex:499}} 
       center
     >loading...{progress.toFixed(2)}%</Html>

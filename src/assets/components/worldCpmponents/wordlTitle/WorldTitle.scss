@@ -1,10 +1,35 @@
 .webgl_world_Container_Title{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     justify-items: end;
     position: absolute;
     top: 10px;
     right: 10px;
     z-index: 10;
+
+    .webgl_world_Container_main{
+        text-transform: uppercase;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 16px;
+        width: 90px;
+        flex-wrap: wrap;
+        text-align: end;
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+    }
+
+    .webgl_world_Container_text{
+        text-transform: capitalize;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 12px;
+        width: 90px;
+        flex-wrap: wrap;
+        text-align: end;
+    }
 }

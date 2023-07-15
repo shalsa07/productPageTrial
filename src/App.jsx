@@ -9,6 +9,7 @@ import ModelPage from './assets/components/modelPage/ModelPage'
 import NavBar from './assets/components/navBar/NavBar'
 import Footer from './assets/components/footer/Footer'
 import Experience from './assets/components/worldCpmponents/Experience'
+import { mrEdwardsKapili } from './assets/mrEdwardsKapili'
 
 // import Popup from './assets/components/popup/Popup'
 const Popup=React.lazy(()=>{
@@ -21,7 +22,7 @@ const World=React.lazy(()=>{
 })
 
 let productSource=[]
-productSource=theMontes
+productSource=mrEdwardsKapili
 
 function App() {
   const snap=useSnapshot(state)

@@ -32,7 +32,7 @@ const state=proxy({
     showRoomsOptions:false,
 
     worldTitle:'vision 3d',
-    textHighlight:'text',
+    title:{title:''},
 })
 
 export default state

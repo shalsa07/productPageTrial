@@ -22,7 +22,8 @@ const BackBtn = () => {
       state.minDist=20
       state.camTarget=[0,0,0]
       state.camPosition=productSource.worldAssets?.camPosition
-      state.roomCord=productSource.worldAssets.roomCordsArray?.default
+      state.roomCord=productSource.worldAssets?.default
+      state.title.title=state.title.title=productSource.worldAssets?.welcome
       // console.log('click')
     },dblclickFtn:()=>{
       state.showArrows=true

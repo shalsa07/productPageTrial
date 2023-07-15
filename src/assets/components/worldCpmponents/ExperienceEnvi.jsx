@@ -34,6 +34,7 @@ const ExperienceEnvi = () => {
     >
         <Suspense fallback={<Progress/>}>
             <Envi/>
+            <Progress/>
             <OrbitControls
               minDistance={snap.minDist}
               maxDistance={snap.maxDist}

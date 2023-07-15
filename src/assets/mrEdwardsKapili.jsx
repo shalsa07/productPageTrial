@@ -14,7 +14,7 @@ import DeckOutlinedIcon from '@mui/icons-material/DeckOutlined';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
 import state from './stateManagement/store';
 
-const theMontes={
+const mrEdwardsKapili={
 
     logoPng:'./logo.png',
     logoText:'luyaridesigns',
@@ -24,20 +24,18 @@ const theMontes={
             title:'renderings',
             desc:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis at alias illo porro et minus excepturi aperiam debitis quidem, veniam dolores explicabo totam tempore est dicta repellat ipsum ex sed?',
             imgs:[
-                // {id:'option 1: road 1',option:'option 1',url:'./assets/themontes/option1/0000_Opt1.jpg'},
-                // {id:'option 1: road 2',option:'option 1',url:'./assets/themontes/option1/0001_Opt1.jpg'},
-                // {id:'option 1: pool 1',option:'option 1',url:'./assets/themontes/option1/0002_Opt1.jpg'},
-                // {id:'option 1: pool 2',option:'option 1',url:'./assets/themontes/option1/0003_Opt1.jpg'},
+                {id:'road view 1',option:'option 1',url:'./assets/mredwards/option1/Opt1_0000.jpg'},
+                {id:'road view 2',option:'option 1',url:'./assets/mredwards/option1/Opt1_0001.jpg'},
+                {id:'driveway view',option:'option 1',url:'./assets/mredwards/option1/Opt1_0002.jpg'},
 
-                {id:'option 2: road 1',option:'option 2',url:'./assets/themontes/option2/0000_Opt2.jpg'},
-                {id:'option 2: road 2',option:'option 2',url:'./assets/themontes/option2/0001_Opt2.jpg'},
-                {id:'option 2: pool 1',option:'option 2',url:'./assets/themontes/option2/0002_Opt2.jpg'},
-                {id:'option 2: pool 2',option:'option 2',url:'./assets/themontes/option2/0003_Opt2.jpg'},
-
-                {id:'kitchen view',option:'option 2',url:'./assets/themontes/0005.jpg'},
-                {id:'lounge view',option:'option 2',url:'./assets/themontes/0006.jpg'},
-                {id:'Bedroom view 1',option:'option 2',url:'./assets/themontes/0007.jpg'},
-                {id:'Bedroom view 2',option:'option 2',url:'./assets/themontes/0008.jpg'},
+                {id:'lounge view 1',option:'option 1',url:'./assets/mredwards/option1/Opt1_0003.jpg'},
+                {id:'lounge view 2',option:'option 1',url:'./assets/mredwards/option1/Opt1_0004.jpg'},
+                {id:'lounge view 3',option:'option 1',url:'./assets/mredwards/option1/Opt1_0005.jpg'},
+                {id:'Kitchen view 1',option:'option 1',url:'./assets/mredwards/option1/Opt1_0006.jpg'},
+                {id:'Kitchen view 2',option:'option 1',url:'./assets/mredwards/option1/Opt1_0007.jpg'},
+                {id:'Kitchen view 3',option:'option 1',url:'./assets/mredwards/option1/Opt1_0008.jpg'},
+                {id:'bedroomview 1',option:'option 1',url:'./assets/mredwards/option1/Opt1_0009.jpg'},
+                {id:'bedroomview 2',option:'option 1',url:'./assets/mredwards/option1/Opt1_0010.jpg'},
             ],
             instructions:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. ',
         },
@@ -46,15 +44,11 @@ const theMontes={
             title:'drawings',
             desc:'Lorem, ipsum dolor sit amet consectetur adipisicing',
             imgs:[
-                // {id:'option 1: sunStudy',option:'option 1',url:'./assets/themontes/option1/Opt 1 SunStudy.jpg'},
-                // {id:'option 1: plans',option:'option 1',url:'./assets/themontes/option1/Opt 1 Plans.jpg'},
-                // {id:'option 1: elevations',option:'option 1',url:'./assets/themontes/option1/Opt 1 Elevation.jpg'},
-
-                {id:'option 2: sunStudy',option:'option 2',url:'./assets/themontes/option2/Opt 2 SunStudy.jpg'},
-                {id:'option 2: plans',option:'option 2',url:'./assets/themontes/option2/Opt 2 Plan.jpg'},
-                {id:'option 2: plans',option:'option 2',url:'./assets/themontes/option2/Opt 2 Plan.jpg'},
-                {id:'option 2: elevations',option:'option 2',url:'./assets/themontes/option2/Opt 2 Elevation.jpg'},
-                {id:'option 2: elevations',option:'option 2',url:'./assets/themontes/option2/Opt 2 Elevation.jpg'},
+                {id:'option 1: sunStudy',option:'option 1',url:'./assets/mredwards/option1/Opt 1 SunStudy.jpg'},
+                {id:'option 1: site',option:'option 1',url:'./assets/mredwards/option1/Opt 1 Site.jpg'},
+                {id:'option 1: plans',option:'option 1',url:'./assets/mredwards/option1/Opt 1 Plans.jpg'},
+                {id:'option 1: elevations',option:'option 1',url:'./assets/mredwards/option1/Opt 1 Elevation.jpg'},
+                {id:'option 1: site',option:'option 1',url:'./assets/mredwards/option1/Opt 1 Site.jpg'},
             ],
             instructionsTitle:'Lorem, ipsum dolor sit amet',
             instructions:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis at alias illo porro et minus excepturi aperiam debitis quidem, veniam dolores explicabo totam tempore est dicta repellat ipsum ex sed?',
@@ -62,53 +56,44 @@ const theMontes={
     ],
 
     popup_drawings:[
-        // {id:'option 1: elevations',option:'option 1',url:'./assets/themontes/option1/Opt 1 Elevation.jpg'},
-        // {id:'option 1: plans',option:'option 1',url:'./assets/themontes/option1/Opt 1 Plans.jpg'},
-        // {id:'option 1: sunStudy',option:'option 1',url:'./assets/themontes/option1/Opt 1 SunStudy.jpg'},
-
-        {id:'option 2: elevations',option:'option 1',url:'./assets/themontes/option2/Opt 2 Elevation.jpg'},
-        {id:'option 2: plans',option:'option 1',url:'./assets/themontes/option2/Opt 2 Plans.jpg'},
-        {id:'option 2: sunStudy',option:'option 1',url:'./assets/themontes/option2/Opt 2 SunStudy.jpg'},
-        {id:'option 2: plans',option:'option 1',url:'./assets/themontes/option2/Opt 2 Plans.jpg'},
-        {id:'option 2: sunStudy',option:'option 1',url:'./assets/themontes/option2/Opt 2 SunStudy.jpg'},
+        {id:'option 1: sunStudy',option:'option 1',url:'./assets/mredwards/option1/opt1_sunStudy.jpg'},
+        {id:'option 1: site',option:'option 1',url:'./assets/mredwards/option1/opt1_site.jpg'},
+        {id:'option 1: plans',option:'option 1',url:'./assets/mredwards/option1/opt1_plans.jpg'},
+        {id:'option 1: elevations',option:'option 1',url:'./assets/mredwards/option1/opt1_elevations.jpg'},
+        {id:'option 2: sunStudy',option:'option 2',url:'./assets/mredwards/option2/opt2_sunStudy.jpg'},
+        {id:'option 2: site',option:'option 2',url:'./assets/mredwards/option2/opt2_site.jpg'},
+        {id:'option 2: plans',option:'option 2',url:'./assets/mredwards/option2/opt2_plans.jpg'},
+        {id:'option 2: elevations',option:'option 2',url:'./assets/mredwards/option2/opt2_elevations.jpg'},
     ],
 
     popup_renders:[
-        // {id:'option 1: road 1',option:'option 1',url:'./assets/themontes/option1/0000_Opt1.jpg'},
-        // {id:'option 1: road 2',option:'option 1',url:'./assets/themontes/option1/0001_Opt1.jpg'},
-        // {id:'option 1: pool 1',option:'option 1',url:'./assets/themontes/option1/0002_Opt1.jpg'},
-        // {id:'option 1: pool 2',option:'option 1',url:'./assets/themontes/option1/0003_Opt1.jpg'},
+        {id:'road view 1',option:'option 1',url:'./assets/mredwards/option1/Opt1_0000.jpg'},
+        {id:'road view 2',option:'option 1',url:'./assets/mredwards/option1/Opt1_0001.jpg'},
+        {id:'driveway view',option:'option 1',url:'./assets/mredwards/option1/Opt1_0002.jpg'},
 
-
-        {id:'option 2: road 1',option:'option 2',url:'./assets/themontes/option2/0000_Opt2.jpg'},
-        {id:'option 2: road 2',option:'option 2',url:'./assets/themontes/option2/0001_Opt2.jpg'},
-        {id:'option 2: pool 1',option:'option 2',url:'./assets/themontes/option2/0002_Opt2.jpg'},
-        {id:'option 2: pool 2',option:'option 2',url:'./assets/themontes/option2/0003_Opt2.jpg'},
-
-        {id:'kitchen view',option:'option 2',rl:'./assets/themontes/0005.jpg'},
-        {id:'lounge view',option:'option 2',url:'./assets/themontes/0006.jpg'},
-        {id:'Bedroom view 1',option:'option 2',url:'./assets/themontes/0007.jpg'},
-        {id:'Bedroom view 2',option:'option 2',url:'./assets/themontes/0008.jpg'},
+        {id:'lounge view 1',option:'option 1',url:'./assets/mredwards/option1/Opt1_0003.jpg'},
+        {id:'lounge view 2',option:'option 1',url:'./assets/mredwards/option1/Opt1_0004.jpg'},
+        {id:'lounge view 3',option:'option 1',url:'./assets/mredwards/option1/Opt1_0005.jpg'},
+        {id:'Kitchen view 1',option:'option 1',url:'./assets/mredwards/option1/Opt1_0006.jpg'},
+        {id:'Kitchen view 2',option:'option 1',url:'./assets/mredwards/option1/Opt1_0007.jpg'},
+        {id:'Kitchen view 3',option:'option 1',url:'./assets/mredwards/option1/Opt1_0008.jpg'},
+        {id:'bedroomview 1',option:'option 1',url:'./assets/mredwards/option1/Opt1_0009.jpg'},
+        {id:'bedroomview 2',option:'option 1',url:'./assets/mredwards/option1/Opt1_0010.jpg'},
     ],
 
     popup_imgs:[
-        // {id:'option 1: road 1',option:'option 1',url:'./assets/themontes/option1/0000_Opt1.jpg'},
-        // {id:'option 1: road 2',option:'option 1',url:'./assets/themontes/option1/0001_Opt1.jpg'},
-        // {id:'option 1: pool 1',option:'option 1',url:'./assets/themontes/option1/0002_Opt1.jpg'},
-        // {id:'option 1: pool 2',option:'option 1',url:'./assets/themontes/option1/0003_Opt1.jpg'},
-        // {id:'option 2: plans',option:'option 2',url:'./assets/themontes/option2/Opt 2 Plan.jpg'},
-        // {id:'option 2: sunStudy',option:'option 2',url:'./assets/themontes/option2/Opt 2 SunStudy.jpg'},
-        // {id:'option 2: elevations',option:'option 2',url:'./assets/themontes/option2/Opt 2 Elevation.jpg'},
+        {id:'road view 1',option:'option 1',url:'./assets/mredwards/option1/Opt1_0000.jpg'},
+        {id:'road view 2',option:'option 1',url:'./assets/mredwards/option1/Opt1_0001.jpg'},
+        {id:'driveway view',option:'option 1',url:'./assets/mredwards/option1/Opt1_0002.jpg'},
 
-        {id:'option 2: road 1',option:'option 2',url:'./assets/themontes/option2/0000_Opt2.jpg'},
-        {id:'option 2: road 2',option:'option 2',url:'./assets/themontes/option2/0001_Opt2.jpg'},
-        {id:'option 2: pool 1',option:'option 2',url:'./assets/themontes/option2/0002_Opt2.jpg'},
-        {id:'option 2: pool 2',option:'option 2',url:'./assets/themontes/option2/0003_Opt2.jpg'},
-
-        {id:'kitchen view',option:'option 2',url:'./assets/themontes/0005.jpg'},
-        {id:'lounge view',option:'option 2',url:'./assets/themontes/0006.jpg'},
-        {id:'Bedroom view 1',option:'option 2',url:'./assets/themontes/0007.jpg'},
-        {id:'Bedroom view 2',option:'option 2',url:'./assets/themontes/0008.jpg'},
+        {id:'lounge view 1',option:'option 1',url:'./assets/mredwards/option1/Opt1_0003.jpg'},
+        {id:'lounge view 2',option:'option 1',url:'./assets/mredwards/option1/Opt1_0004.jpg'},
+        {id:'lounge view 3',option:'option 1',url:'./assets/mredwards/option1/Opt1_0005.jpg'},
+        {id:'Kitchen view 1',option:'option 1',url:'./assets/mredwards/option1/Opt1_0006.jpg'},
+        {id:'Kitchen view 2',option:'option 1',url:'./assets/mredwards/option1/Opt1_0007.jpg'},
+        {id:'Kitchen view 3',option:'option 1',url:'./assets/mredwards/option1/Opt1_0008.jpg'},
+        {id:'bedroomview 1',option:'option 1',url:'./assets/mredwards/option1/Opt1_0009.jpg'},
+        {id:'bedroomview 2',option:'option 1',url:'./assets/mredwards/option1/Opt1_0010.jpg'},
     ],
 
     desc: {
@@ -325,28 +310,24 @@ const theMontes={
         minDist:[20],
         
         houses:[
-            // {name:'house_opt1',path:'./assets/themontes/house_Opt1.glb',toogleRoofLevel:"house_opt1_roof"},
-            {name:'house_opt2',path:'./assets/themontes/house_Opt2.glb',toogleRoofLevel:"house_opt2_roof"},
+            {name:'option1House',path:'./assets/mredwards/house_Opt1.glb',toogleRoofLevel:"house_opt1_roof"},
         ],
     
-        placeHolder:{name:'option2House',path:'./assets/themontes/house_Opt2.glb'},
+        placeHolder:{name:'option2House',path:'./assets/mredwards/house_Opt1.glb'},
         
         supportFiles:[
-            {name:'cars',path:'./assets/themontes/cars.glb'},
-            {name:'vegetation',path:'./assets/themontes/vegetation.glb'},
-            {name:'site',path:'./assets/themontes/site.glb'},
-            {name:'furniture',path:'./assets/themontes/house_Opt2_furn.glb'},
+            {name:'cars',path:'./assets/mredwards/cars.glb'},
+            {name:'vegetation',path:'./assets/mredwards/vegetation.glb'},
+            {name:'site',path:'./assets/mredwards/site.glb'},
+            {name:'site',path:'./assets/mredwards/house_Opt1_furn.glb'},
         ],
            
         _360s:[
-            // {title:'lawn area',url:'./assets/themontes/option1/Opt1_360_0000.jpg'},
-            // {title:'dirveway',url:'./assets/themontes/option1/Opt1_360_0001.jpg'},
-            // {title:'pool',url:'./assets/themontes/option1/Opt1_360_0002.jpg'},
-            {title:'lawn area',url:'./assets/themontes/option2/Opt2_360_0000.jpg'},
-            {title:'dirveway',url:'./assets/themontes/option2/Opt2_360_0001.jpg'},
-            {title:'pool',url:'./assets/themontes/option2/Opt2_360_0002.jpg'},
+            {title:'driveway',url:'./assets/mredwards/option1/Opt1_360_0000.jpg'},
+            {title:'pool',url:'./assets/mredwards/option1/Opt1_360_0001.jpg'},
+            {title:'side view 1',url:'./assets/mredwards/option1/Opt1_360_0002.jpg'},
         ]
     }
 }
 
-export {theMontes}
+export {mrEdwardsKapili}

@@ -8,21 +8,19 @@ import './WorldTitle.scss'
 const WorldTitle = () => {
   const snap=useSnapshot(state)
 
-  const titles={
+  const title={
       title:'vision 3d'
   }
-  const text={
-      title:'text'
-  }
   useEffect(()=>{
-    titles.title=snap.worldTitle
-    text.title=snap.textHighlight
-  },[])
+    title.title=snap.worldTitle
+  },[snap.titleText])
+
+  console.log(snap.title)
 
   return (
     <div className='webgl_world_Container_Title'>
-        <Title1 item={titles}/>
-        <Text1 item={text}/>
+        <h1 className='webgl_world_Container_main'>{title.title}</h1>
+        <span className='webgl_world_Container_text'>{snap.title.title}</span>
     </div>
   )
 }
