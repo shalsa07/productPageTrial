@@ -4,6 +4,7 @@ import { AppContext } from '../../stateManagement/AppContext'
 import { useSnapshot } from 'valtio'
 import state from '../../stateManagement/store'
 import { useThree } from '@react-three/fiber'
+import { useControls } from 'leva'
 
 const BaseObj=()=>{
     return(
@@ -29,7 +30,25 @@ const ExperienceObjs = () => {
     const {productSource}=useContext(AppContext)
     const models=useThree()
 
+    const [a,b,c]=snap.camPosition
+
+    // console.log(snap.camPosition,a,b,c)
+    
+        const {roomCord,camPosition}=useControls({
+            roomCord:{
+                value:{x:0,y:0,z:0},
+                step:.05
+            },
+            camPosition:{
+                value:{x:0,y:0,z:0},
+                step:.05
+            }
+        })
+
     useEffect(()=>{
+        // models.camera.position.set(camPosition.x,camPosition.y,camPosition.z)
+        snap.showRoomsOptions && models.camera.position.set(a,b,c)
+
         productSource.worldAssets.houses.forEach(element => {
             models.scene.traverse((obj)=>{
                 obj.name === element.toogleRoofLevel && (obj.visible=snap.showRoof)
@@ -44,6 +63,7 @@ const ExperienceObjs = () => {
         {/* <BaseObj/> */}
         <group
             position={snap.roomCord}
+            // position={[roomCord.x,roomCord.y,roomCord.z]}
         >
             <group>
                 {productSource.worldAssets?.houses.map((item)=><ExperienceGltfObjs key={item.name} item={item}/>)}

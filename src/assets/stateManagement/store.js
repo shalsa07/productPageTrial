@@ -19,7 +19,7 @@ const state=proxy({
     imageCount:{title:0},
     imageTotal:{title:0},
 
-    fullSrcn:true,
+    fullSrcn:false,
     ArMode:false,
     popup:false,
     _3dModelState:false,

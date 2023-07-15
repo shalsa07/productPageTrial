@@ -207,12 +207,36 @@ const theMontes={
 
         roomCordsArray:{
             default:[-6.79,0,14],
-            driveway:[9,2,2],
-            pool:[6.66,2,25],
-            lounge:[11,2,23],
-            foyer:[5,2,11],
-            kitchen:[8.5,2,17],
-            bedroom:[2.5,2,21],
+            driveway:{
+                roomCord:[-10,0,1],
+                camPosition:[0,1.2,0],
+                orbitTarget:[-.1,1.2,-.1],
+            },
+            pool:{
+                roomCord:[-7.5,0,28],
+                camPosition:[0,1.2,0],
+                orbitTarget:[0,1.2,0.1],
+            },
+            lounge:{
+                roomCord:[-10,0,23.5],
+                camPosition:[0,1.2,0],
+                orbitTarget:[.1,1.2,.1],
+            },
+            foyer:{
+                roomCord:[5,0,11],
+                camPosition:[0,1.2,0],
+                orbitTarget:[0,1.2,-.1],
+            },
+            kitchen:{
+                roomCord:[-5.7,0,17.4],
+                camPosition:[0,1.2,0],
+                orbitTarget:[.1,1.2,.05],
+            },
+            bedroom:{
+                roomCord:[-1.35,0,23],
+                camPosition:[0,1.2,0],
+                orbitTarget:[0,1.2,.1],
+            },
         },    
             
         camPosition:[20,20,25],

@@ -6,6 +6,7 @@ import Progress from './Progress'
 import { AppContext } from '../../stateManagement/AppContext'
 import { useSnapshot } from 'valtio'
 import state from '../../stateManagement/store'
+import { useControls } from 'leva'
 
 const Envi = () => {
     const {productSource}=useContext(AppContext)
@@ -19,9 +20,16 @@ const Envi = () => {
 
 const ExperienceEnvi = () => {
     const snap=useSnapshot(state)
+    const {camPosition,target}=useControls({
+        target:{
+            value:{x:0,y:0,z:0},
+            step:.05
+        }
+    })
   return (
     <Canvas
         camera={{position:snap.camPosition}}
+        // camera={{position:[camPosition.x,camPosition.y,camPosition.z]}}
     >
         <Suspense fallback={<Progress/>}>
             <Envi/>
@@ -30,6 +38,7 @@ const ExperienceEnvi = () => {
                 minDistance={snap.minDist}
                 maxDistance={snap.maxDist}
                 target={snap.orbitTarget}
+                // target={[target.x,target.y,target.z]}
             />
         </Suspense>
     </Canvas>
