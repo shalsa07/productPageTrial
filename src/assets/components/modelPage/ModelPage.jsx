@@ -11,7 +11,7 @@ import BtnShare from '../btnShare/BtnShare'
 import DownloadsEmail from '../downloadsContacts/DownloadsEmail'
 import Footer from '../footer/Footer'
 
-import World from '../worldCpmponents/World'
+// import World from '../worldCpmponents/World'
 // const World=React.lazy(()=>{
 //   return import('../worldCpmponents/World')
 // })
@@ -26,6 +26,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import BtnLike from '../btnLike/BtnLike'
 import { useSnapshot } from 'valtio'
 import state from '../../stateManagement/store'
+import Experience from '../worldCpmponents/Experience'
 
 const ModelPage = () => {
   const snap=useSnapshot(state)
@@ -95,7 +96,7 @@ const ModelPage = () => {
         <div ref={refSectionWrapper} className="section_render_drawings_webgl_contaner_wrapper">
           {productSource.section?.map((section)=><Suspense key={section.id}><SectionWrap item={section.imgs}/></Suspense>)}
           <div className="webglWrap">
-            <Suspense><World/></Suspense>
+            <Suspense><Experience/></Suspense>
           </div>
         </div>
       </section>

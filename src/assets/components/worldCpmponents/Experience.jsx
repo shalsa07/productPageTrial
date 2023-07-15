@@ -1,31 +1,40 @@
-import { Canvas } from '@react-three/fiber'
-import React, { Suspense, useContext } from 'react'
-import Progress from './Progress'
-import ExperienceObjs from './ExperienceObjs'
-import { Environment, OrbitControls } from '@react-three/drei'
+import React, { useContext } from 'react'
+import BackBtn from './worldBack/BackBtn'
+import ExperienceEnvi from './ExperienceEnvi'
+import state from '../../stateManagement/store'
+import { useSnapshot } from 'valtio'
 import { AppContext } from '../../stateManagement/AppContext'
-
-
-
-const ExperienceEnvi = () => {
-    const {productSource}=useContext(AppContext)
-  return (
-    <>
-        <ambientLight/>
-        <Environment files={productSource.worldAssets?.enviHdriMap}/>
-    </>
-  )
-}
+import WorldTitle from './wordlTitle/WorldTitle'
+import WorldMenuContainer from './worldMenuContainer/WorldMenuContainer'
+import OptionsBtn from './worldOptionBtn/OptionsBtn'
+import WorldMenuContainerAr360 from './worldMenuContainer/WorldMenuContainerAr360'
+import WorldMenuContainerLevels from './worldMenuContainer/WorldMenuContainerLevels'
+import WorldMenuContainerRooms from './worldMenuContainer/WorldMenuContainerRooms'
+import WorldArrows from './arrowsContainers/WorldArrows'
 
 const Experience = () => {
+    const snap=useSnapshot(state)
+    const {productSource}=useContext(AppContext)
+
+    state.roomCord=productSource.worldAssets?.roomCordsArray.default
+    state.camPosition=productSource.worldAssets?.camPosition
+    // state.camPosition=productSource.worldAssets?.orbitTarget
+    state.maxDist=productSource.worldAssets?.maxDist
+    state.minDist=productSource.worldAssets?.minDist
+
   return (
-    <Canvas>
-        <Suspense fallback={<Progress/>}>
-            <ExperienceEnvi/>
-            <ExperienceObjs/>
-            <OrbitControls/>
-        </Suspense>
-    </Canvas>
+    <>
+        {snap._3dModelState && <BackBtn/>}
+        {snap.showArrows && <WorldArrows/>}
+        <WorldTitle/>
+        <OptionsBtn/>
+        <WorldMenuContainerAr360/>
+        <WorldMenuContainer/>
+        <WorldMenuContainerLevels/>
+        <WorldMenuContainerRooms/>
+        
+        <ExperienceEnvi/>
+    </>
   )
 }
 

@@ -8,7 +8,7 @@ const Progress = () => {
     <Html 
       style={{zIndex:499}} 
       center
-    >loading...{progress.toFixed(2)}</Html>
+    >loading...{progress.toFixed(2)}%</Html>
   )
 }
 

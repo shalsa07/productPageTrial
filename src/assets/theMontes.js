@@ -216,15 +216,15 @@ const theMontes={
         },    
             
         camPosition:[20,20,25],
-        orbitTarget:[0,0,-1],
+        orbitTarget:[0,0,0],
 
         roomCord:[-6.75,0,14],
         roomRotation:[0],
 
         maxPolarAngle:.5,
 
-        maxDist:[0.5],
-        minDist:[0.1],
+        maxDist:[50],
+        minDist:[20],
         
         houses:[
             // {name:'house_opt1',path:'./assets/themontes/house_Opt1.glb',toogleRoofLevel:"house_opt1_roof"},
