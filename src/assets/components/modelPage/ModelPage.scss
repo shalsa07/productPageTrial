@@ -125,9 +125,15 @@
                     width: calc(100% - 40px);
                     margin: auto;
                     display: flex;
+                    gap: 10px;
                     
                     .modelPage_desc_detail_wrap_items{
-                        flex: 1 0 200px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: start;
+                        justify-items: start;
+                        flex: 1 0 150px;
+                        height: auto;
                     }
     
                 }

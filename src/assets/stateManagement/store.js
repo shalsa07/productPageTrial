@@ -9,7 +9,7 @@ const state=proxy({
 
     optionCount:0,
 
-    mapCount:0,
+    mapNumber:0,
     minDist:.1,
     maxDist:.5,
     maxPolarAngle:110,
@@ -19,6 +19,7 @@ const state=proxy({
     imageTotal:{title:0},
 
     fullSrcn:false,
+    showPOI:true,
     ArMode:false,
     popup:false,
     _3dModelState:false,

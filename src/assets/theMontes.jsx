@@ -112,14 +112,14 @@ const theMontes={
     ],
 
     desc: {
-        title:'2 bedroomed house',
+        title:'3 bedroomed house',
         descTitle:'model',
-        desc:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis at alias illo porro et minus excepturi aperiam debitis quidem, veniam dolores explicabo totam tempore est dicta repellat ipsum ex sed?',
+        desc:{title:`The brief was to come with a cozy 3 bedroom house with a helper's quaters attached. It also had to have a media room for the viewing television as well as isolate the noise and from the quiter lounge which would be used to entertain quests. The design needed to be trendy but understated. It need to sophisticated enough but too expensive to build.`}
     },
 
     productText:{
         projectTitle:{
-            title:`Four Bedroom house`
+            title:`Three Bedroom house`
         },
     
         typeOfDesign:{
@@ -127,20 +127,20 @@ const theMontes={
         },
     
         typeOfHouse:{
-            title:`3 bedroomhouse design`
+            title:`3 bedroom house design`
         },
     
         specialFeatures:{
-            title:`bedrooms, breakfast - nook, maid’s room, walk-in pantry, formal dining, game/rec room, library/study, outdoor fireplace
+            title:`3 Bedrooms, a Helper's Bedroom and Shower, Breakfast - nook, Media-room, Scullary, formal dining, Office space, outdoor seating and entertainment area, and an airy kitchen. 
         `},
     
         houseSpaces:[
             {
-                title:`plan dimensions:`,
+                title:`plan dimensions: 235m2`,
                 specs:{
                     title:`
-                        width:
-                        height:`
+                        area: 16.56m x 23.69m,
+                        height: 5.6m`
                 }
             },
             {
@@ -154,63 +154,62 @@ const theMontes={
                 title:`Square Footage Breakdown:`,
                 specs:{
                     title:`
-                        plinth area:
-                        porch area:`
+                        plinth area: 235m2,
+                        porch area: 40m2 `
                 }
             },
             {
                 title:`Bedrooms:`,
                 specs:{
                     title:`
-                        1 Master bedroom: 
-                            Walking closet:
-                            sleeping area:
-                        2 Bathrooms:`
+                        1 Master bedroom: 4.8m x 4.6m,
+                        Walking closet: 1.38m x 4.6m,
+                        sleeping area: 3.35m x 4.6m,
+                        2 Bathrooms: 3.33m x 2.99m`,
                     }
             },
             {
                 title:`Kitchen:`,
                 specs:{
                     title:`
-                        Kitchen area:
-                        island:
-                        walk-in-pantry:`
+                        Kitchen area: 2.99m x 5.26m,
+                        island: 0.9m x `
                     }
             },
             {
                 title:`additional rooms:`,
                 specs:{
                     title:`
-                        helper's room:
-                        greet room`
+                        helper's room:3.22m x 3.22m`
                     }
             },
             {
-                title:`Grarge:`,
+                title:`Grarge`,
                 specs:{
                     title:`
-                        2 car parking`
+                        Garage area: 5.98m x 6.16m,
+                        2 parking`
                     }
             },
             {
                 title:`outdoor areas:`,
                 specs:{
                     title:`
-                        porch`
+                        porch: 40m2`
                     }
             },
             {
                 title:`roof:  `,
                 specs:{
                     title:`
-                        finsh:
-                        pitch:
+                        finsh: Galvanised roofing sheet (Chromadek finish) to client color,
+                        pitch: 5 deegrees rise with the feature roof at 17 degrees rise
                     `}
             },
         ],
             
         outro:{
-            title:'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
+            title:`the design celebrates the life style of the client and as occured as the plot was the challenge was truely inspirational.`
         },
     },
 
@@ -224,6 +223,112 @@ const theMontes={
         welcome:'experience design',
 
         default:[-6.79,0,14],
+                    
+        camPosition:[20,20,25],
+        orbitTarget:[0,0,0],
+
+        maxPolarAngle:.5,
+
+        maxDist:[50],
+        minDist:[20],
+
+        POIs:{
+            ext:[
+                    {
+                        name:{title:'driveway'},
+                        roomCord:[10,1,-1],
+                        icons:<TimeToLeaveIcon className='icons'/>,
+                        clickFtn:()=>{
+                            state.roomCord=[-10,0,1],
+                            state.camPosition=[0,1.2,0],
+                            state.orbitTarget=[-.1,1.2,-.1],
+                            state.maxDist=.05
+                            state.minDist=.01
+                            state.title=theMontes.worldAssets.roomCordsArray.ext[0].name
+                        }
+                    },
+                    {
+                        name:{title:'pool area'},
+                        roomCord:[7.5,1,-28],
+                        icons:<PoolOutlinedIcon className='icons'/>,
+                        clickFtn:()=>{
+                            state.roomCord=[-7.5,0,28],
+                            state.camPosition=[0,1.2,0],
+                            state.orbitTarget=[0,1.2,0.1],
+                            state.maxDist=.05
+                            state.minDist=.01
+                            state.title=theMontes.worldAssets.roomCordsArray.ext[1].name
+                        }
+                    }
+                ],
+            int:[
+                    {
+                        name:{title:'lounge'},
+                        roomCord:[10,1,-23.5],
+                        icons:<WeekendOutlinedIcon className='icons'/>,
+                        clickFtn:()=>{
+                            state.roomCord=[-10,0,23.5],
+                            state.camPosition=[0,1.2,0],
+                            state.orbitTarget=[.1,1.2,.1],
+                            state.maxDist=.05
+                            state.minDist=.01
+                            state.title=theMontes.worldAssets.roomCordsArray.int[0].name
+                        }
+                    },
+                    {
+                        name:{title:'foyer'},
+                        roomCord:[5,1,-11],
+                        icons:<MeetingRoomIcon className='icons'/>,
+                        clickFtn:()=>{
+                            state.roomCord=[-5,0,11],
+                            state.camPosition=[0,1.2,0],
+                            state.orbitTarget=[0,1.2,-.1],
+                            state.maxDist=.05
+                            state.minDist=.01
+                            state.title=theMontes.worldAssets.roomCordsArray.int[1].name
+                        }
+                    },
+                    {
+                        name:{title:'kitchen'},
+                        roomCord:[5.7,1,-17.4],
+                        icons:<CountertopsOutlinedIcon className='icons'/>,
+                        clickFtn:()=>{
+                            state.roomCord=[-5.7,0,17.4],
+                            state.camPosition=[0,1.2,0],
+                            state.orbitTarget=[.1,1.2,.05],
+                            state.maxDist=.05
+                            state.minDist=.01
+                            state.title=theMontes.worldAssets.roomCordsArray.int[2].name
+                        }
+                    },
+                    {
+                        name:{title:'media room'},
+                        roomCord:[6.8,1,-19.8],
+                        icons:<LiveTvIcon className='icons'/>,
+                        clickFtn:()=>{
+                            state.roomCord=[-6.8,0,19.8],
+                            state.camPosition=[0,1.2,0],
+                            state.orbitTarget=[-0.01,1.2,0],
+                            state.maxDist=.05
+                            state.minDist=.01
+                            state.title=theMontes.worldAssets.roomCordsArray.int[3].name
+                        }
+                    },
+                    {
+                        name:{title:'bedroom'},
+                        roomCord:[1.35,1,-23],
+                        icons:<BedOutlinedIcon className='icons'/>,
+                        clickFtn:()=>{
+                            state.roomCord=[-1.35,0,23],
+                            state.camPosition=[0,1.2,0],
+                            state.orbitTarget=[0,1.2,.1],
+                            state.maxDist=.05
+                            state.minDist=.01
+                            state.title=theMontes.worldAssets.roomCordsArray.int[4].name
+                        }
+                    }
+                ]
+            },
 
         roomCordsArray:{
             ext:[
@@ -315,14 +420,6 @@ const theMontes={
                 },
             ]
         },   
-            
-        camPosition:[20,20,25],
-        orbitTarget:[0,0,0],
-
-        maxPolarAngle:.5,
-
-        maxDist:[50],
-        minDist:[20],
         
         houses:[
             // {name:'house_opt1',path:'./assets/themontes/house_Opt1.glb',toogleRoofLevel:"house_opt1_roof"},

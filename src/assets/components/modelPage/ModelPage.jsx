@@ -106,18 +106,20 @@ const ModelPage = () => {
           <div className="modelPage_desc_details">
             <div className="modelPage_desc_intro">
               <Title1 item={productSource.productText?.typeOfHouse}/>
-              <Text2 item={productSource.productText?.specialFeatures}/>
+              <Text1 item={productSource.desc?.desc}/>
+              <br/>
+              <Text1 item={productSource.productText?.specialFeatures}/>
             </div>
             <hr/>
             <div className="modelPage_desc_detail_wrap">
               {productSource.productText?.houseSpaces.map((item)=><div key={item?.title} className="modelPage_desc_detail_wrap_items">
                 <Title2 item={item}/>
-                <Text2 item={item}/>
+                <Text2 item={item.specs}/>
               </div>)}
             </div>
             <hr/>
             <div className="modelPage_desc_outro">
-              <Text2 item={productSource.productText?.outro}/>
+              <Text1 item={productSource.productText?.outro}/>
             </div>
           </div>
           <div className="modelPage_desc_downloads">

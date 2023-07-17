@@ -1,8 +1,12 @@
 .text2{
-    font-weight: 200;
+    font-weight: 400;
     text-transform: capitalize;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    white-space: pre-wrap;
+    font-size: 12px;
+    white-space: pre-line;
+    // word-break: break-all;
+    margin: 0;
+    padding: 0;
 }

@@ -25,58 +25,36 @@ const WorldArrows = () => {
     let count=0
     let countOptions=0
 
-    const btnLeft=()=>{
-        count === 0 ? count=productSource.worldAssets._360s.length-1 : count--
+    const decreament=(value,array)=>{
+        // count === 0 ? count=productSource.worldAssets._360s.length-1 : count--
+        // state.mapCount=count
+        // console.log(count)
 
-        console.log(count)
-        // if(!snap.showAR360Options){
-        //     if(count === 0){
-        //         count=productSource.worldAssets._360s.length-1
-        //    }else if(count<productSource.worldAssets._360s.length){
-        //         count--
-        //    }
-        //    state.mapCount=count
-        //    //    state.orbitTarget=[5,0,0]
-        //    console.log('360 left',count)
-        // // console.log('360 left',count)
+        if(count === 0){
+            count=array.length-1
+        }else if(count < array.length){
+            count--
+        }
+        value=count
 
-        // }else if(snap._3dModelState){
-        //     if(countOptions === 0){
-        //         countOptions=productSource.worldAssets.houses.length-1
-        //    }else if(countOptions<productSource.worldAssets.houses.length){
-        //         countOptions--
-        //    }
-        //    console.log('model options',countOptions)
-        // //    state.optionCount=countOptions
-        // }
-    //    console.log(snap.camTarget)
+        console.log(count,value,array)
+
     }
 
-    const btnRight=()=>{
-        count < productSource.worldAssets._360s.length ? count++ : 0
+    const increament=(value,array)=>{
+        // count < productSource.worldAssets._360s.length-1 ? count++ : count = 0
+        // state.mapCount=count
+        // console.log(count)
 
-        console.log(count,productSource.worldAssets._360s.length-1)
-        // if(!snap._3dModelState){
-        //     if(count<productSource.worldAssets._360s.length-1){
-        //         count++
-        //    }else if(count=productSource.worldAssets._360s.length-1){
-        //         count=0
-        //    }
-        //    state.mapCount=count
-        // //    state.orbitTarget=[5,0,0]
-        // console.log('360 right',count)
+        if(count < array.length -1){
+            count++
+        }else if(count === array-1){
+            count=0
+        }
+        value=count
 
-        //    console.log('360 right',count)
-        // }else if(snap._3dModelState){
-        //     if(countOptions<productSource.worldAssets.houses.length-1){
-        //         countOptions++
-        //     }else if(countOptions=productSource.worldAssets.houses.length-1){
-        //         countOptions=0
-        //     }
-        //     state.optionCount=countOptions
-        //     console.log('model options',countOptions,snap.optionCount)
-        // }
-    //    console.log(snap.camTarget)
+        console.log(count,value,array)
+        
     }
 
     useEffect(()=>{
@@ -84,30 +62,17 @@ const WorldArrows = () => {
 
         arrowsContainerArray.forEach((btn,index)=>{
             btn.addEventListener('click',()=>{
-               
-                // index==1 && (state.showLevel=false)
-                
-                switch (index) {
-                    case 0:
-                        btnLeft()
-                        // console.log('click btn',index,count)
-                        break;
-                    case 1:
-                        btnRight()
-                        // console.log('click btn',index,count)
-                        break;
-                
-                    default:
-                        state.mapCount=0
-                        state.optionCount=0
-                        break;
-                }
-                // console.log(btn,index)
+                index === 0 && decreament(state.mapNumber,productSource.worldAssets._360s)
+                index === 1 && increament(state.mapNumber,productSource.worldAssets._360s)
+
+                productSource.worldAssets?.houses > 0 && (index === 0 && decreament(snap.mapCount,productSource.worldAssets.houses))
+                productSource.worldAssets?.houses > 0 && (index === 1 && increament(snap.mapCount,productSource.worldAssets.houses))
+                console.log(btn.id,index)
             })
         })
 
         // console.log(arrowsContainerArray)
-    },[snap.mapCount])
+    },[])
 
   return (
     <div ref={refArrowsContainer} className='webgl_world_Arrows' style={{bottom: snap._3dModelState ? '80px': '20px'}}>

@@ -22,7 +22,7 @@ const World=React.lazy(()=>{
 })
 
 let productSource=[]
-productSource=mrEdwardsKapili
+productSource=theMontes
 
 function App() {
   const snap=useSnapshot(state)
@@ -39,8 +39,7 @@ function App() {
           ? <div className="webglWrap_Fullscrn">
             <Suspense><Experience/></Suspense>
           </div>
-          :<><ModelPage/><Footer/></>}
-        
+          : <><ModelPage/><Footer/></>}
       </Suspense>
     </AppContext.Provider>
   )

@@ -15,7 +15,7 @@ const WorldTitle = () => {
     title.title=snap.worldTitle
   },[snap.titleText])
 
-  console.log(snap.title)
+  // console.log(snap.title)
 
   return (
     <div className='webgl_world_Container_Title'>

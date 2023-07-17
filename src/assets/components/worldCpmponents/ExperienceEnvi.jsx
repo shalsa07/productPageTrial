@@ -1,4 +1,4 @@
-import React, { Suspense, useContext } from 'react'
+import React, { Suspense, useContext, useEffect } from 'react'
 import ExperienceObjs from './ExperienceObjs'
 import { Environment, OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
@@ -21,12 +21,18 @@ const Envi = () => {
 
 const ExperienceEnvi = () => {
     const snap=useSnapshot(state)
-    const {camPosition,target}=useControls({
-        target:{
-            value:{x:0,y:0,z:0},
-            step:.05
-        }
-    })
+    const {productSource}=useContext(AppContext)
+    // useEffect(()=>{
+    //   state.camPosition=productSource.worldAssets?.camPosition
+    // },[])
+    // const {camPosition,target}=useControls({
+    //     target:{
+    //         value:{x:0,y:0,z:0},
+    //         step:.05
+    //     }
+    // })
+
+    console.log(snap.camPosition)
   return (
     <Canvas
         camera={{position:snap.camPosition}}
@@ -34,7 +40,7 @@ const ExperienceEnvi = () => {
     >
         <Suspense fallback={<Progress/>}>
             <Envi/>
-            <Progress/>
+            {/* <Progress/> */}
             <OrbitControls
               minDistance={snap.minDist}
               maxDistance={snap.maxDist}

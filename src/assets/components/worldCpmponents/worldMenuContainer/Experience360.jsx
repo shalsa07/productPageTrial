@@ -32,7 +32,7 @@ const Experience360 = () => {
     <mesh scale-z={-1} rotation-y={degToRad(90)}>
         <sphereGeometry args={[200,64,64]}/>
         <meshBasicMaterial 
-            map={textureMapArray[snap.mapCount]} 
+            map={textureMapArray[snap.mapNumber]} 
             side={BackSide}
         />
     </mesh>
