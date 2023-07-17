@@ -34,6 +34,7 @@ const state=proxy({
 
     worldTitle:'vision 3d',
     title:{title:''},
+    worldMode:{title:''},
 })
 
 export default state

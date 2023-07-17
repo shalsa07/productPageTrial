@@ -33,6 +33,7 @@ hr{
   top: 60px;
   height: calc(100vh - 60px);
   width: 100%;
+  overflow: hidden;
 
   @media screen and (max-width: $appwidth_567) {
     top: 60px;
@@ -40,4 +41,18 @@ hr{
   }
   // background-color: red;
   // gap: 10px;
+}
+
+.arButton{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 40px;
+  top: calc(100% - 120px);
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin: 0 auto;
 }

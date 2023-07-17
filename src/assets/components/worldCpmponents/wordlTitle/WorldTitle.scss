@@ -22,6 +22,17 @@
         padding: 0;
     }
 
+    .webgl_world_Container_3dmode{
+        text-transform: uppercase;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 12px;
+        width: 90px;
+        flex-wrap: wrap;
+        text-align: end;
+    }
+
     .webgl_world_Container_text{
         text-transform: capitalize;
         display: flex;

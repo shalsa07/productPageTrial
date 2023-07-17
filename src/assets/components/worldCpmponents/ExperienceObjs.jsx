@@ -71,10 +71,10 @@ const ExperienceObjs = () => {
             position={snap.roomCord}
             // position={[roomCord.x,roomCord.y,roomCord.z]}
         >
-            {snap.showPOI && <group>
+            {/* {snap.showPOI && <group>
                 {productSource.worldAssets.POIs.ext?.map((item)=><Html key={item.name.title} onClick={()=>console.log('clicked ')} onMouseOver={()=>console.log('mouse')} center occlude position={item.roomCord}><LocationOnIcon style={{width:'20px',height:'20px', cursor:'pointer', color: poiHover ? 'red' : 'white'}} /></Html>)}
                 {snap.showRoof && productSource.worldAssets.POIs.int?.map((item)=><Html className='' key={item.name.title} onClick={()=>console.log('clicked ')} onMouseOver={()=>console.log('mouse')} center occlude position={item.roomCord}><LocationOnIcon style={{width:'20px',height:'20px', cursor:'pointer', color: poiHover ? 'red' : 'white'}} /></Html>)}
-            </group>}
+            </group>} */}
             <group>
                 {productSource.worldAssets?.houses.map((item)=><ExperienceGltfObjs key={item.name} item={item}/>)}
             </group>

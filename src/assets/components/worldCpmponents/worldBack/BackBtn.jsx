@@ -26,6 +26,7 @@ const BackBtn = () => {
       state.title.title=state.title.title=productSource.worldAssets?.welcome
       // console.log('click')
     },dblclickFtn:()=>{
+      state.ArMode=false
       state.showArrows=true
       state._3dModelState=false
       state.showAR360Options=false

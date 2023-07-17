@@ -11,6 +11,7 @@ import WorldMenuContainerAr360 from './worldMenuContainer/WorldMenuContainerAr36
 import WorldMenuContainerLevels from './worldMenuContainer/WorldMenuContainerLevels'
 import WorldMenuContainerRooms from './worldMenuContainer/WorldMenuContainerRooms'
 import WorldArrows from './arrowsContainers/WorldArrows'
+import Ar from './Ar'
 
 const Experience = () => {
     const snap=useSnapshot(state)
@@ -21,6 +22,8 @@ const Experience = () => {
     // state.maxDist=productSource.worldAssets?.maxDist
     // state.minDist=productSource.worldAssets?.minDist
     // state.camPosition=productSource.worldAssets?.orbitTarget
+
+    console.log(snap.ArMode)
 
   return (
     <>
@@ -33,7 +36,7 @@ const Experience = () => {
         <WorldMenuContainerLevels/>
         <WorldMenuContainerRooms/>
 
-        <ExperienceEnvi/>
+        {snap.ArMode ? <Ar/> :  <ExperienceEnvi/>}
     </>
   )
 }

@@ -223,6 +223,8 @@ const theMontes={
         welcome:'experience design',
 
         default:[-6.79,0,14],
+
+        arPosition:[-6.79,0,5],
                     
         camPosition:[20,20,25],
         orbitTarget:[0,0,0],
