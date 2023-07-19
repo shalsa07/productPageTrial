@@ -38,6 +38,7 @@ hr{
   @media screen and (max-width: $appwidth_567) {
     top: 60px;
     height: calc(100vh - 60px);
+    cursor: pointer;
   }
   // background-color: red;
   // gap: 10px;
@@ -55,4 +56,5 @@ hr{
   transform: translateX(-50%);
   text-align: center;
   margin: 0 auto;
+  z-index: 499;
 }

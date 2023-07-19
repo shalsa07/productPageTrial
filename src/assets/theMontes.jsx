@@ -335,7 +335,7 @@ const theMontes={
         roomCordsArray:{
             ext:[
             {
-                name:{title:'driveway'},
+                name:'driveway',
                 icons:<TimeToLeaveIcon className='icons'/>,
                 clickFtn:()=>{
                     state.roomCord=[-10,0,1],
@@ -347,7 +347,7 @@ const theMontes={
                 }
             },
             {
-                name:{title:'pool area'},
+                name:'pool area',
                 icons:<PoolOutlinedIcon className='icons'/>,
                 clickFtn:()=>{
                     state.roomCord=[-7.5,0,28],
@@ -361,7 +361,7 @@ const theMontes={
         ],
             int:[
                 {
-                    name:{title:'lounge'},
+                    name:'lounge',
                     icons:<WeekendOutlinedIcon className='icons'/>,
                     clickFtn:()=>{
                         state.roomCord=[-10,0,23.5],
@@ -373,7 +373,7 @@ const theMontes={
                     }
                 },
                 {
-                    name:{title:'foyer'},
+                    name:'foyer',
                     icons:<MeetingRoomIcon className='icons'/>,
                     clickFtn:()=>{
                         state.roomCord=[-5,0,11],
@@ -385,7 +385,7 @@ const theMontes={
                     }
                 },
                 {
-                    name:{title:'kitchen'},
+                    name:'kitchen',
                     icons:<CountertopsOutlinedIcon className='icons'/>,
                     clickFtn:()=>{
                         state.roomCord=[-5.7,0,17.4],
@@ -397,7 +397,7 @@ const theMontes={
                     }
                 },
                 {
-                    name:{title:'media room'},
+                    name:'media room',
                     icons:<LiveTvIcon className='icons'/>,
                     clickFtn:()=>{
                         state.roomCord=[-6.8,0,19.8],
@@ -409,7 +409,7 @@ const theMontes={
                     }
                 },
                 {
-                    name:{title:'bedroom'},
+                    name:'bedroom',
                     icons:<BedOutlinedIcon className='icons'/>,
                     clickFtn:()=>{
                         state.roomCord=[-1.35,0,23],
@@ -425,6 +425,7 @@ const theMontes={
         
         houses:[
             // {name:'house_opt1',path:'./assets/themontes/house_Opt1.glb',toogleRoofLevel:"house_opt1_roof"},
+            // {name:'house_opt2',path:'./assets/themontes/house_Opt2 Baked.glb',toogleRoofLevel:"house_opt2_roof`"},
             {name:'house_opt2',path:'./assets/themontes/house_Opt2.glb',toogleRoofLevel:"house_opt2_roof"},
         ],
     
@@ -444,6 +445,9 @@ const theMontes={
             {title:'lawn area',url:'./assets/themontes/option2/Opt2_360_0000.jpg'},
             {title:'dirveway',url:'./assets/themontes/option2/Opt2_360_0001.jpg'},
             {title:'pool',url:'./assets/themontes/option2/Opt2_360_0002.jpg'},
+            {title:'bedroom',url:'./assets/themontes/option2/Opt2_360_0005.jpg'},
+            {title:'dinning/kitchen',url:'./assets/themontes/option2/Opt2_360_0003.jpg'},
+            {title:'lounge',url:'./assets/themontes/option2/Opt2_360_0004.jpg'},
         ]
     }
 }

@@ -18,7 +18,7 @@ const rightArrow={
 }
 
 const WorldArrows = () => {
-    const {productSource}=useContext(AppContext)
+    const {productSource,setMapInd}=useContext(AppContext)
     const snap=useSnapshot(state)
     const refArrowsContainer=useRef()
 
@@ -35,25 +35,26 @@ const WorldArrows = () => {
         }else if(count < array.length){
             count--
         }
-        value=count
+        // value=count
+        setMapInd(prev=>count)
 
-        console.log(count,value,array)
+        // console.log(count,`state - ${value}`,array)
 
     }
 
     const increament=(value,array)=>{
-        // count < productSource.worldAssets._360s.length-1 ? count++ : count = 0
-        // state.mapCount=count
+        // count < array.length-1 ? count++ : count = 0
         // console.log(count)
 
-        if(count < array.length -1){
+        if(count < array.length-1){
             count++
-        }else if(count === array-1){
+        }else if(count === array.length-1){
             count=0
         }
-        value=count
+        // value=count
+        setMapInd(prev=>count)
 
-        console.log(count,value,array)
+        // console.log(count,`state - ${value}`,array)
         
     }
 
@@ -67,7 +68,7 @@ const WorldArrows = () => {
 
                 productSource.worldAssets?.houses > 0 && (index === 0 && decreament(snap.mapCount,productSource.worldAssets.houses))
                 productSource.worldAssets?.houses > 0 && (index === 1 && increament(snap.mapCount,productSource.worldAssets.houses))
-                console.log(btn.id,index)
+                // console.log(btn.id,index)
             })
         })
 

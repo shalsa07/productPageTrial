@@ -12,7 +12,7 @@ const WorldTitle = () => {
       title:'vision 3d'
   }
   useEffect(()=>{
-    title.title=snap.worldMode
+    // modeTitle.title=snap.worldTitle
     title.title=snap.worldTitle
   },[snap.titleText,snap.worldTitle])
 
@@ -21,8 +21,8 @@ const WorldTitle = () => {
   return (
     <div className='webgl_world_Container_Title'>
         <h1 className='webgl_world_Container_main'>{title.title}</h1>
-        <span className='webgl_world_Container_3dmode'>{snap.title.title}</span>
-        <span className='webgl_world_Container_text'>{snap.title.title}</span>
+        <span className='webgl_world_Container_3dmode'>{snap.worldMode}</span>
+        <span className='webgl_world_Container_text'>{snap.title}</span>
     </div>
   )
 }

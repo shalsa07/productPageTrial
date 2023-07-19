@@ -8,6 +8,7 @@ const state=proxy({
     roomCord:[0,0,0],
 
     optionCount:0,
+    sectionIndex:0,
 
     mapNumber:0,
     minDist:.1,
@@ -33,8 +34,8 @@ const state=proxy({
     showRoomsOptions:false,
 
     worldTitle:'vision 3d',
-    title:{title:''},
-    worldMode:{title:''},
+    title:'',
+    worldMode:'',
 })
 
 export default state

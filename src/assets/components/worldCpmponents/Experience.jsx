@@ -12,6 +12,7 @@ import WorldMenuContainerLevels from './worldMenuContainer/WorldMenuContainerLev
 import WorldMenuContainerRooms from './worldMenuContainer/WorldMenuContainerRooms'
 import WorldArrows from './arrowsContainers/WorldArrows'
 import Ar from './Ar'
+import BtnFullscrn from '../btnFullscrn/BtnFullscrn'
 
 const Experience = () => {
     const snap=useSnapshot(state)
@@ -23,14 +24,16 @@ const Experience = () => {
     // state.minDist=productSource.worldAssets?.minDist
     // state.camPosition=productSource.worldAssets?.orbitTarget
 
-    console.log(snap.ArMode)
+    // console.log(snap.ArMode)
 
   return (
     <>
         {snap._3dModelState && <BackBtn/>}
         {snap.showArrows && <WorldArrows/>}
+        {snap._3dModelState || snap.ArMode ? null : <OptionsBtn/>}
+
+        <BtnFullscrn/>
         <WorldTitle/>
-        <OptionsBtn/>
         <WorldMenuContainerAr360/>
         <WorldMenuContainer/>
         <WorldMenuContainerLevels/>

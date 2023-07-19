@@ -23,10 +23,11 @@ const BackBtn = () => {
       state.camTarget=[0,0,0]
       state.camPosition=productSource.worldAssets?.camPosition
       state.roomCord=productSource.worldAssets?.default
-      state.title.title=state.title.title=productSource.worldAssets?.welcome
+      state.title=state.title=productSource.worldAssets?.welcome
       // console.log('click')
     },dblclickFtn:()=>{
       state.ArMode=false
+      state.fullSrcn=false
       state.showArrows=true
       state._3dModelState=false
       state.showAR360Options=false

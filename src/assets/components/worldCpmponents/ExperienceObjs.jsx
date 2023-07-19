@@ -55,14 +55,14 @@ const ExperienceObjs = () => {
         productSource.worldAssets.houses.forEach(element => {
             models.scene.traverse((obj)=>{
                 obj.name === element.toogleRoofLevel && (obj.visible=snap.showRoof)
-                
+                // console.log(obj)
             })
         })
 
         // console.log(models)
     },[snap.camPosition,snap.orbitTarget,snap.roomCord,snap.showRoof])
     
-    console.log(productSource.POIs)
+    // console.log(snap.roomCord)
 
     return (
     <>

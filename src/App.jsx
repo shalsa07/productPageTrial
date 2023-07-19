@@ -35,17 +35,26 @@ productSource=theMontes
 
 function App() {
   const snap=useSnapshot(state)
+  const [mapInd,setMapInd]=useState(0)
+  const [sectionCount,setSectionCount]=useState(0)
   return (
     <AppContext.Provider
       value={{
-        productSource
+        productSource,mapInd,setMapInd,sectionCount,setSectionCount
       }}
     >
       <Suspense>
         {snap.popup && <Popup/>}
         <NavBar/>
         {snap.fullSrcn 
-          ? <div className="webglWrap_Fullscrn">
+          ? <div 
+              className="webglWrap_Fullscrn"
+              onDoubleClick={()=>{
+                if(!snap._3dModelState){
+                  state.fullSrcn=!snap.fullSrcn
+                }
+              }} 
+            >
             <Suspense><Experience/></Suspense>
           </div>
           : <><ModelPage/><Footer/></>}

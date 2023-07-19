@@ -9,7 +9,7 @@ import { BackSide } from 'three'
 
 const Experience360 = () => {
     const snap=useSnapshot(state)
-    const {productSource}=useContext(AppContext)
+    const {productSource,mapInd}=useContext(AppContext)
     let textureUrlsArray=[]
     let textureMapArray=[]
     let mapIndex=0
@@ -25,14 +25,14 @@ const Experience360 = () => {
     textureMapArray=useTexture(textureUrlsArray)
     useEffect(()=>{
 
-    },[])
+    },[snap.mapNumber])
 
-    // console.log(textureMapArray,textureUrlsArray,textureMapArray[snap.mapCount])
+    // console.log(snap.mapNumber)
   return (
     <mesh scale-z={-1} rotation-y={degToRad(90)}>
         <sphereGeometry args={[200,64,64]}/>
         <meshBasicMaterial 
-            map={textureMapArray[snap.mapNumber]} 
+            map={textureMapArray[mapInd]} 
             side={BackSide}
         />
     </mesh>

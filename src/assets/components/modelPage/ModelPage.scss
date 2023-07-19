@@ -89,6 +89,10 @@
             height: 100%;
             display: flex;
             transition: all .25s ease;
+
+            &:hover{
+                cursor: pointer;
+            }
         }
     }
 
@@ -147,12 +151,17 @@
                 flex: 1 0;
                 height: 100%;
                 padding-bottom: 60px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
 
                 .modelPage_desc_downloads_container{
                     position: relative;
                     top: 0;bottom: 0;
                     margin: auto 0;
                     width: calc(100% - 40px);
+                    width: 100%;
+                    height: 100%;
                 }
             }
 
@@ -178,6 +187,7 @@
         @media screen and (max-width:$appwidth_567) {
             top: 0;
             width: 100%;
+            cursor: pointer;
             // width: calc(100vh - 60px);
         }
     }

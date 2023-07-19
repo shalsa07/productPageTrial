@@ -30,7 +30,7 @@ import Experience from '../worldCpmponents/Experience'
 
 const ModelPage = () => {
   const snap=useSnapshot(state)
-  const {productSource}=useContext(AppContext)
+  const {productSource,sectionCount,setSectionCount}=useContext(AppContext)
   const refSectionWrapper=useRef()
   const refBtnSectionLeft=useRef()
   const refBtnSectionRight=useRef()
@@ -54,6 +54,7 @@ const ModelPage = () => {
       }else if(count<sectionWrapperArray.length){
         count--
       }
+      // setSectionCount(count)
       sectionWrapper.style.transform=`translateX(-${count * sectionWrapper.clientWidth}px)`
       // console.log('click left',count)
     })
@@ -67,8 +68,9 @@ const ModelPage = () => {
       else if(count===sectionWrapperArray.length-1){
         count=0
       }
+      // setSectionCount(count)
       sectionWrapper.style.transform=`translateX(-${count * sectionWrapper.clientWidth}px)`
-      // console.log('click right',count)
+      // console.log('click right',count)  
     })
 
     // console.log(sectionWrapper.children)

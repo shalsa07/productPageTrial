@@ -24,7 +24,7 @@ const WorldMenuContainerAr360 = () => {
               state.camTarget=[0,0,0]
               state.camPosition=productSource.worldAssets?.camPosition
               state.roomCord=productSource.worldAssets?.default
-              state.title.title=productSource.worldAssets?.welcome
+              state.title=productSource.worldAssets?.welcome
               state.worldMode='3d mode'
               
               productSource.worldAssets.houses.length-1 === 0 && (state.showArrows=false)
@@ -32,20 +32,20 @@ const WorldMenuContainerAr360 = () => {
               // console.log('click')
             }
       },
-      {
-          icons:<ViewInArIcon className='icons'/>,name:'ar',clickFtn:()=>{
-            state.fullSrcn=true
-            state.ArMode=true
-            state.worldMode='ar mode'
-            state._3dModelState=true
-            state.roomCord=productSource.worldAssets?.arPosition
-            state.showWorldOptions=true
-            state.showAR360Options=false
-            state.showArrows=false
+      // {
+      //     icons:<ViewInArIcon className='icons'/>,name:'ar',clickFtn:()=>{
+      //       state.fullSrcn=true
+      //       state.ArMode=true
+      //       state.worldMode='ar mode'
+      //       state._3dModelState=true
+      //       state.roomCord=productSource.worldAssets?.arPosition
+      //       state.showWorldOptions=true
+      //       state.showAR360Options=false
+      //       state.showArrows=false
   
-            // console.log('click')
-          }
-      },
+      //       // console.log('click')
+      //     }
+      // },
   ]
   return (
     <div className='webgl_world_WorldMenuContainer' style={{top: '70px', scale: snap.showAR360Options? '1' : '0',transition:'all .5s ease',gap:'40px'}}>

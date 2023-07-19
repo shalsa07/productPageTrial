@@ -12,13 +12,12 @@ const WorldMenuContainerRooms = () => {
 
     // console.log(uiExtRooms[0])
     return (
-    <div className='webgl_world_WorldMenuContainer_levels' style={{bottom: snap.showRoomsOptions ? '10px' : '-80px'}}>
-        <p style={{textTransform:'uppercase',fontWeight:'300',letterSpacing:'3px'}}>exterior</p>
-        {productSource.worldAssets?.roomCordsArray.ext.map((btns)=><div key={btns.name} className='worldBtn_wrap'><WorldBtn item={btns}/></div>)}
-        <p style={{textTransform:'uppercase',fontWeight:'300',letterSpacing:'3px'}}>interior</p>
-        {productSource.worldAssets?.roomCordsArray.int.map((btns)=><div key={btns.name} className='worldBtn_wrap'><WorldBtn item={btns}/></div>)}
-        {/* {uiIntRooms.map((btns)=><WorldBtn key={btns.name} item={btns}/>)} */}
-    </div>
+      <div className='webgl_world_WorldMenuContainer_levels' style={{bottom: snap.showRoomsOptions ? '10px' : '-80px'}}>
+          <p style={{textTransform:'uppercase',fontWeight:'300',letterSpacing:'3px'}}>exterior</p>
+          {productSource.worldAssets?.roomCordsArray.ext.map((btns)=><div key={btns.name} className='worldBtn_wrap'><WorldBtn item={btns}/></div>)}
+          <p style={{textTransform:'uppercase',fontWeight:'300',letterSpacing:'3px'}}>interior</p>
+          {productSource.worldAssets?.roomCordsArray.int.map((btns)=><div key={btns.name} className='worldBtn_wrap'><WorldBtn item={btns}/></div>)}
+      </div>
   )
 }
 
