@@ -36,6 +36,7 @@ const state=proxy({
     worldTitle:'vision 3d',
     title:'',
     worldMode:'',
+    popupSource:'popup_imgs',
 })
 
 export default state

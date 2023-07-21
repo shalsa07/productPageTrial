@@ -108,7 +108,10 @@ const ModelPage = () => {
           <div className="modelPage_desc_details">
             <div className="modelPage_desc_intro">
               <Title1 item={productSource.productText?.typeOfHouse}/>
-              <Text1 item={productSource.desc?.desc}/>
+              <div className="modelPage_desc_keytFeatures">
+                {productSource.desc?.desc}
+              </div>
+              <Text1 item={productSource.features?.map((item)=><div key={item.name?.title}><span>{item.number}</span><div className="icons">{item.icons}</div></div>)}/>
               <br/>
               <Text1 item={productSource.productText?.specialFeatures}/>
             </div>

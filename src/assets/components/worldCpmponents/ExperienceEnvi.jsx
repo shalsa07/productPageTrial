@@ -35,7 +35,8 @@ const ExperienceEnvi = () => {
     // console.log(snap.camPosition)
   return (
     <Canvas
-        camera={{position:snap.camPosition}}
+        camera={{position:snap.camPosition,far:200,fov:65}}
+        shadows={false}
         // camera={{position:[camPosition.x,camPosition.y,camPosition.z]}}
     >
         <Suspense fallback={<Progress/>}>

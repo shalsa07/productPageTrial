@@ -11,6 +11,7 @@ import WeekendOutlinedIcon from '@mui/icons-material/WeekendOutlined';
 import CountertopsOutlinedIcon from '@mui/icons-material/CountertopsOutlined';
 import BedOutlinedIcon from '@mui/icons-material/BedOutlined';
 import DeckOutlinedIcon from '@mui/icons-material/DeckOutlined';
+import DoorBackIcon from '@mui/icons-material/DoorBack';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
 import state from './stateManagement/store';
 
@@ -99,12 +100,12 @@ const mrEdwardsKapili={
     desc: {
         title:'3 bedroomed house',
         descTitle:'model',
-        desc:{title:`The brief was to come with a cozy 3 bedroom house with a helper's quaters attached. It also had to have a media room for the viewing Television as well as isolate the noise and from the quiter lounge which would be used to entertain quests. The design needed to be trendy but understated. It need to sophisticated enough but too expensive to build.`}
+        desc:{title:`The brief was to come with a cozy 3 bedroom house with a helper's quaters attached. It also had to have a media room for the viewing television as well as isolate the noise and from the quiter lounge which would be used to entertain quests. The design needed to be trendy but understated. It need to sophisticated enough but too expensive to build.`}
     },
 
     productText:{
         projectTitle:{
-            title:`Three Bedroom house`
+            title:`Four Bedroom house`
         },
     
         typeOfDesign:{
@@ -112,11 +113,11 @@ const mrEdwardsKapili={
         },
     
         typeOfHouse:{
-            title:`3 bedroom house design`
+            title:`4 bedroom house design`
         },
     
         specialFeatures:{
-            title:`3 Bedrooms, a Helper's Bedroom and Shower, Breakfast - nook, Media-room, Scullary, formal dining, Office space, outdoor seating and entertainment area, and an airy kitchen. 
+            title:`4 Bedrooms, a Helper's Bedroom and Shower, Breakfast - nook, Media-room, Scullary, formal dining, Office space, outdoor seating and entertainment area, and an airy kitchen. 
         `},
     
         houseSpaces:[
@@ -124,7 +125,7 @@ const mrEdwardsKapili={
                 title:`plan dimensions: 235m2`,
                 specs:{
                     title:`
-                        area: 16.56m x 23.69m
+                        area: 16.56m x 23.69m,
                         height: 5.6m`
                 }
             },
@@ -139,25 +140,25 @@ const mrEdwardsKapili={
                 title:`Square Footage Breakdown:`,
                 specs:{
                     title:`
-                        plinth area: 235m2
-                        porch area:`
+                        plinth area: 235m2,
+                        porch area: 40m2 `
                 }
             },
             {
                 title:`Bedrooms:`,
                 specs:{
                     title:`
-                        1 Master bedroom: 4.8m x 4.6m
-                            Walking closet: 1.38m x 4.6m
-                            sleeping area: 3.35m x 4.6m
-                        2 Bathrooms: 3.33m x 2.99m`
+                        1 Master bedroom: 4.8m x 4.6m,
+                        Walking closet: 1.38m x 4.6m,
+                        sleeping area: 3.35m x 4.6m,
+                        2 Bathrooms: 3.33m x 2.99m`,
                     }
             },
             {
                 title:`Kitchen:`,
                 specs:{
                     title:`
-                        Kitchen area: 2.99m x 5.26m
+                        Kitchen area: 2.99m x 5.26m,
                         island: 0.9m x `
                     }
             },
@@ -172,7 +173,7 @@ const mrEdwardsKapili={
                 title:`Grarge`,
                 specs:{
                     title:`
-                        Garage area: 5.98m x 6.16m
+                        Garage area: 5.98m x 6.16m,
                         2 parking`
                     }
             },
@@ -180,15 +181,15 @@ const mrEdwardsKapili={
                 title:`outdoor areas:`,
                 specs:{
                     title:`
-                        porch`
+                        porch: 40m2`
                     }
             },
             {
                 title:`roof:  `,
                 specs:{
                     title:`
-                        finsh: Galvanised roofing sheet (Chromadek finish) to client color
-                        pitch: 5 deegrees with the feature room at 17 degrees
+                        finsh: Galvanised roofing sheet (Chromadek finish) to client color,
+                        pitch: 5 deegrees rise with the feature roof at 17 degrees rise
                     `}
             },
         ],
@@ -197,104 +198,6 @@ const mrEdwardsKapili={
             title:`the design celebrates the life style of the client and as occured as the plot was the challenge was truely inspirational.`
         },
     },
-
-    POIs:{
-        ext:[
-                {
-                    name:{title:'driveway'},
-                    roomCord:[10,1,-1],
-                    icons:<TimeToLeaveIcon className='icons'/>,
-                    clickFtn:()=>{
-                        state.roomCord=[-10,0,1],
-                        state.camPosition=[0,1.2,0],
-                        state.orbitTarget=[-.1,1.2,-.1],
-                        state.maxDist=.05
-                        state.minDist=.01
-                        state.title=theMontes.worldAssets.roomCordsArray.ext[0].name
-                    }
-                },
-                {
-                    name:{title:'pool area'},
-                    roomCord:[7.5,1,-28],
-                    icons:<PoolOutlinedIcon className='icons'/>,
-                    clickFtn:()=>{
-                        state.roomCord=[-7.5,0,28],
-                        state.camPosition=[0,1.2,0],
-                        state.orbitTarget=[0,1.2,0.1],
-                        state.maxDist=.05
-                        state.minDist=.01
-                        state.title=theMontes.worldAssets.roomCordsArray.ext[1].name
-                    }
-                }
-            ],
-        int:[
-                {
-                    name:{title:'lounge'},
-                    roomCord:[10,1,-23.5],
-                    icons:<WeekendOutlinedIcon className='icons'/>,
-                    clickFtn:()=>{
-                        state.roomCord=[-10,0,23.5],
-                        state.camPosition=[0,1.2,0],
-                        state.orbitTarget=[.1,1.2,.1],
-                        state.maxDist=.05
-                        state.minDist=.01
-                        state.title=theMontes.worldAssets.roomCordsArray.int[0].name
-                    }
-                },
-                {
-                    name:{title:'foyer'},
-                    roomCord:[5,1,-11],
-                    icons:<MeetingRoomIcon className='icons'/>,
-                    clickFtn:()=>{
-                        state.roomCord=[-5,0,11],
-                        state.camPosition=[0,1.2,0],
-                        state.orbitTarget=[0,1.2,-.1],
-                        state.maxDist=.05
-                        state.minDist=.01
-                        state.title=theMontes.worldAssets.roomCordsArray.int[1].name
-                    }
-                },
-                {
-                    name:{title:'kitchen'},
-                    roomCord:[5.7,1,-17.4],
-                    icons:<CountertopsOutlinedIcon className='icons'/>,
-                    clickFtn:()=>{
-                        state.roomCord=[-5.7,0,17.4],
-                        state.camPosition=[0,1.2,0],
-                        state.orbitTarget=[.1,1.2,.05],
-                        state.maxDist=.05
-                        state.minDist=.01
-                        state.title=theMontes.worldAssets.roomCordsArray.int[2].name
-                    }
-                },
-                {
-                    name:{title:'media room'},
-                    roomCord:[6.8,1,-19.8],
-                    icons:<LiveTvIcon className='icons'/>,
-                    clickFtn:()=>{
-                        state.roomCord=[-6.8,0,19.8],
-                        state.camPosition=[0,1.2,0],
-                        state.orbitTarget=[-0.01,1.2,0],
-                        state.maxDist=.05
-                        state.minDist=.01
-                        state.title=theMontes.worldAssets.roomCordsArray.int[3].name
-                    }
-                },
-                {
-                    name:{title:'bedroom'},
-                    roomCord:[1.35,1,-23],
-                    icons:<BedOutlinedIcon className='icons'/>,
-                    clickFtn:()=>{
-                        state.roomCord=[-1.35,0,23],
-                        state.camPosition=[0,1.2,0],
-                        state.orbitTarget=[0,1.2,.1],
-                        state.maxDist=.05
-                        state.minDist=.01
-                        state.title=theMontes.worldAssets.roomCordsArray.int[4].name
-                    }
-                }
-            ]
-        },
 
     worldAssets:{
         enviHdriMap:'./enviMap.hdr',
@@ -305,107 +208,18 @@ const mrEdwardsKapili={
 
         welcome:'experience design',
 
-        default:[-6.79,0,14],
+        default:[-9,0,11],
 
-        roomCordsArray:{
-            ext:[
-            {
-                name:{title:'driveway'},
-                icons:<TimeToLeaveIcon className='icons'/>,
-                clickFtn:()=>{
-                    state.roomCord=[-10,0,1],
-                    state.camPosition=[0,1.2,0],
-                    state.orbitTarget=[-.1,1.2,-.1],
-                    state.maxDist=.05
-                    state.minDist=.01
-                    state.title=theMontes.worldAssets.roomCordsArray.ext[0].name
-                }
-            },
-            {
-                name:{title:'pool area'},
-                icons:<PoolOutlinedIcon className='icons'/>,
-                clickFtn:()=>{
-                    state.roomCord=[-7.5,0,28],
-                    state.camPosition=[0,1.2,0],
-                    state.orbitTarget=[0,1.2,0.1],
-                    state.maxDist=.05
-                    state.minDist=.01
-                    state.title=theMontes.worldAssets.roomCordsArray.ext[1].name
-                }
-            },
-        ],
-            int:[
-                {
-                    name:{title:'lounge'},
-                    icons:<WeekendOutlinedIcon className='icons'/>,
-                    clickFtn:()=>{
-                        state.roomCord=[-10,0,23.5],
-                        state.camPosition=[0,1.2,0],
-                        state.orbitTarget=[.1,1.2,.1],
-                        state.maxDist=.05
-                        state.minDist=.01
-                        state.title=theMontes.worldAssets.roomCordsArray.int[0].name
-                    }
-                },
-                {
-                    name:{title:'foyer'},
-                    icons:<MeetingRoomIcon className='icons'/>,
-                    clickFtn:()=>{
-                        state.roomCord=[-5,0,11],
-                        state.camPosition=[0,1.2,0],
-                        state.orbitTarget=[0,1.2,-.1],
-                        state.maxDist=.05
-                        state.minDist=.01
-                        state.title=theMontes.worldAssets.roomCordsArray.int[1].name
-                    }
-                },
-                {
-                    name:{title:'kitchen'},
-                    icons:<CountertopsOutlinedIcon className='icons'/>,
-                    clickFtn:()=>{
-                        state.roomCord=[-5.7,0,17.4],
-                        state.camPosition=[0,1.2,0],
-                        state.orbitTarget=[.1,1.2,.05],
-                        state.maxDist=.05
-                        state.minDist=.01
-                        state.title=theMontes.worldAssets.roomCordsArray.int[2].name
-                    }
-                },
-                {
-                    name:{title:'media room'},
-                    icons:<LiveTvIcon className='icons'/>,
-                    clickFtn:()=>{
-                        state.roomCord=[-6.8,0,19.8],
-                        state.camPosition=[0,1.2,0],
-                        state.orbitTarget=[-0.01,1.2,0],
-                        state.maxDist=.05
-                        state.minDist=.01
-                        state.title=theMontes.worldAssets.roomCordsArray.int[3].name
-                    }
-                },
-                {
-                    name:{title:'bedroom'},
-                    icons:<BedOutlinedIcon className='icons'/>,
-                    clickFtn:()=>{
-                        state.roomCord=[-1.35,0,23],
-                        state.camPosition=[0,1.2,0],
-                        state.orbitTarget=[0,1.2,.1],
-                        state.maxDist=.05
-                        state.minDist=.01
-                        state.title=theMontes.worldAssets.roomCordsArray.int[4].name
-                    }
-                },
-            ]
-        },   
-            
-        camPosition:[-20,10,-25],
+        camPosition:[-20,5,-25],
         orbitTarget:[0,0,0],
 
         maxPolarAngle:.5,
 
         maxDist:[50],
         minDist:[20],
-        
+
+        arPosition:[-6.79,0,5],
+
         houses:[
             {name:'option1House',path:'./assets/mredwards/house_Opt1.glb',toogleRoofLevel:"house_opt1_roof"},
         ],
@@ -423,7 +237,110 @@ const mrEdwardsKapili={
             {title:'driveway',url:'./assets/mredwards/option1/Opt1_360_0000.jpg'},
             {title:'pool',url:'./assets/mredwards/option1/Opt1_360_0001.jpg'},
             {title:'side view 1',url:'./assets/mredwards/option1/Opt1_360_0002.jpg'},
-        ]
+        ],
+
+        roomCordsArray:{
+            ext:[
+                {
+                    name:'driveway',
+                    icons:<TimeToLeaveIcon className='icons'/>,
+                    clickFtn:()=>{
+                        state.roomCord=[10,0,38],
+                        state.camPosition=[0,-2.2,0],
+                        state.orbitTarget=[.1,-2.2,.1],
+                        state.maxDist=.05
+                        state.minDist=.01
+                        state.title=mrEdwardsKapili.worldAssets.roomCordsArray.ext[0].name
+                    }
+                },
+                {
+                    name:'entrance area',
+                    icons:<DoorBackIcon className='icons'/>,
+                    clickFtn:()=>{
+                        state.roomCord=[6.5,0,18.5],
+                        state.camPosition=[0,-2.2,0],
+                        state.orbitTarget=[.18,-2.175,.025],
+                        state.maxDist=.05
+                        state.minDist=.01
+                        state.title=mrEdwardsKapili.worldAssets.roomCordsArray.ext[1].name
+                    }
+                },
+                {
+                    name:'pool area',
+                    icons:<PoolOutlinedIcon className='icons'/>,
+                    clickFtn:()=>{
+                        state.roomCord=[-17,0,11],
+                        state.camPosition=[0,1.2,0],
+                        state.orbitTarget=[-.1,1.2,0],
+                        state.maxDist=.05
+                        state.minDist=.01
+                        state.title=mrEdwardsKapili.worldAssets.roomCordsArray.ext[1].name
+                    }
+                },
+            ],
+            int:[
+                {
+                    name:'lounge',
+                    icons:<WeekendOutlinedIcon className='icons'/>,
+                    clickFtn:()=>{
+                        state.roomCord=[-4,0,10],
+                        state.camPosition=[0,1.8,0],
+                        state.orbitTarget=[.1,1.8,0],
+                        state.maxDist=.05
+                        state.minDist=.01
+                        state.title=mrEdwardsKapili.worldAssets.roomCordsArray.int[0].name
+                    }
+                },
+                {
+                    name:'foyer',
+                    icons:<MeetingRoomIcon className='icons'/>,
+                    clickFtn:()=>{
+                        state.roomCord=[-8.5,0,17],
+                        state.camPosition=[0,1.2,0],
+                        state.orbitTarget=[-0.1,1.2,0],
+                        state.maxDist=.05
+                        state.minDist=.01
+                        state.title=mrEdwardsKapili.worldAssets.roomCordsArray.int[1].name
+                    }
+                },
+                {
+                    name:'family room',
+                    icons:<CountertopsOutlinedIcon className='icons'/>,
+                    clickFtn:()=>{
+                        state.roomCord=[-4.5,0,20.5],
+                        state.camPosition=[0,1.2,0],
+                        state.orbitTarget=[0,1.2,-.01],
+                        state.maxDist=.05
+                        state.minDist=.01
+                        state.title=mrEdwardsKapili.worldAssets.roomCordsArray.int[2].name
+                    }
+                },
+                {
+                    name:'kitchen',
+                    icons:<LiveTvIcon className='icons'/>,
+                    clickFtn:()=>{
+                        state.roomCord=[-16,0,5],
+                        state.camPosition=[0,2.2,0],
+                        state.orbitTarget=[-0.01,2.2,0.01],
+                        state.maxDist=.05
+                        state.minDist=.01
+                        state.title=mrEdwardsKapili.worldAssets.roomCordsArray.int[3].name
+                    }
+                },
+                {
+                    name:'bedroom',
+                    icons:<BedOutlinedIcon className='icons'/>,
+                    clickFtn:()=>{
+                        state.roomCord=[-15,0,20],
+                        state.camPosition=[0,1.2,0],
+                        state.orbitTarget=[0,1.2,.1],
+                        state.maxDist=.05
+                        state.minDist=.01
+                        state.title=mrEdwardsKapili.worldAssets.roomCordsArray.int[4].name
+                    }
+                },
+            ]
+        }, 
     }
 }
 

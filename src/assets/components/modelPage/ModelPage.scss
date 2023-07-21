@@ -120,7 +120,23 @@
                 align-items: start;
 
                 .modelPage_desc_intro{
+                    display: flex;
+                    flex-direction: column;
                     flex: 1;
+    
+                    .modelPage_desc_keytFeatures{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex: 1 0 100px;
+                        width: 100%;
+                        border-radius: 8px;
+                        margin: 20px 0;
+                        -webkit-box-shadow: $-webkit-box-shadow-thin;
+                        -moz-box-shadow: $-moz-box-shadow-thin;
+                        box-shadow: $box-shadow-thin;
+                        // background-color: red;
+                    }
                 }
 
                 .modelPage_desc_detail_wrap{

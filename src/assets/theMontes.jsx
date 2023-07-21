@@ -12,6 +12,9 @@ import CountertopsOutlinedIcon from '@mui/icons-material/CountertopsOutlined';
 import BedOutlinedIcon from '@mui/icons-material/BedOutlined';
 import DeckOutlinedIcon from '@mui/icons-material/DeckOutlined';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
+
+import StraightenIcon from '@mui/icons-material/Straighten';
+
 import state from './stateManagement/store';
 
 const theMontes={
@@ -39,7 +42,6 @@ const theMontes={
                 {id:'Bedroom view 1',option:'option 2',url:'./assets/themontes/0007.jpg'},
                 {id:'Bedroom view 2',option:'option 2',url:'./assets/themontes/0008.jpg'},
             ],
-            instructions:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. ',
         },
         {
             id:2,
@@ -56,8 +58,6 @@ const theMontes={
                 {id:'option 2: elevations',option:'option 2',url:'./assets/themontes/option2/Opt 2 Elevation.jpg'},
                 {id:'option 2: elevations',option:'option 2',url:'./assets/themontes/option2/Opt 2 Elevation.jpg'},
             ],
-            instructionsTitle:'Lorem, ipsum dolor sit amet',
-            instructions:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis at alias illo porro et minus excepturi aperiam debitis quidem, veniam dolores explicabo totam tempore est dicta repellat ipsum ex sed?',
         },
     ],
 
@@ -118,6 +118,34 @@ const theMontes={
     },
 
     productText:{
+        features:[
+            {
+                name:{title:'area'},
+                number:1,
+                icons:<StraightenIcon className='icons'/>,
+            },
+            {
+                name:{title:'beds'},
+                number:1,
+                icons:<StraightenIcon className='icons'/>,
+            },
+            {
+                name:{title:'baths'},
+                number:1,
+                icons:<StraightenIcon className='icons'/>,
+            },
+            {
+                name:{title:'floors'},
+                number:1,
+                icons:<StraightenIcon className='icons'/>,
+            },
+            {
+                name:{title:'garages'},
+                number:1,
+                icons:<StraightenIcon className='icons'/>,
+            },
+        ],
+
         projectTitle:{
             title:`Three Bedroom house`
         },
@@ -425,8 +453,8 @@ const theMontes={
         
         houses:[
             // {name:'house_opt1',path:'./assets/themontes/house_Opt1.glb',toogleRoofLevel:"house_opt1_roof"},
-            // {name:'house_opt2',path:'./assets/themontes/house_Opt2 Baked.glb',toogleRoofLevel:"house_opt2_roof`"},
-            {name:'house_opt2',path:'./assets/themontes/house_Opt2.glb',toogleRoofLevel:"house_opt2_roof"},
+            {name:'house_opt2',path:'./assets/themontes/house_Opt2 Baked.glb',toogleRoofLevel:"house_opt2_roof`"},
+            // {name:'house_opt2',path:'./assets/themontes/house_Opt2.glb',toogleRoofLevel:"house_opt2_roof"},
         ],
     
         placeHolder:{name:'option2House',path:'./assets/themontes/house_Opt2.glb'},
