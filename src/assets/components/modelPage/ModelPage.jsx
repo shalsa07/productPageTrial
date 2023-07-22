@@ -27,6 +27,7 @@ import BtnLike from '../btnLike/BtnLike'
 import { useSnapshot } from 'valtio'
 import state from '../../stateManagement/store'
 import Experience from '../worldCpmponents/Experience'
+import FeaturesSection from '../featuresSection/FeaturesSection'
 
 const ModelPage = () => {
   const snap=useSnapshot(state)
@@ -75,7 +76,7 @@ const ModelPage = () => {
 
     // console.log(sectionWrapper.children)
   },[])
-  // console.log(productSource.section[0].imgs)
+  // console.log(productSource.productText.features)
   return (
     <div className='modelPage'>
       <Title1 item={productSource.productText?.projectTitle}/>
@@ -108,10 +109,8 @@ const ModelPage = () => {
           <div className="modelPage_desc_details">
             <div className="modelPage_desc_intro">
               <Title1 item={productSource.productText?.typeOfHouse}/>
-              <div className="modelPage_desc_keytFeatures">
-                {productSource.desc?.desc}
-              </div>
-              <Text1 item={productSource.features?.map((item)=><div key={item.name?.title}><span>{item.number}</span><div className="icons">{item.icons}</div></div>)}/>
+              <FeaturesSection/>
+              <Text1 item={productSource.desc?.desc}/>
               <br/>
               <Text1 item={productSource.productText?.specialFeatures}/>
             </div>

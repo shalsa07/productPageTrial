@@ -12,8 +12,13 @@ import CountertopsOutlinedIcon from '@mui/icons-material/CountertopsOutlined';
 import BedOutlinedIcon from '@mui/icons-material/BedOutlined';
 import DeckOutlinedIcon from '@mui/icons-material/DeckOutlined';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
+import BedIcon from '@mui/icons-material/Bed';
+import OtherHousesIcon from '@mui/icons-material/OtherHouses';
+import DirectionsCarFilledIcon from '@mui/icons-material/DirectionsCarFilled';
 
 import StraightenIcon from '@mui/icons-material/Straighten';
+import BathtubIcon from '@mui/icons-material/Bathtub';
+
 
 import state from './stateManagement/store';
 
@@ -121,28 +126,28 @@ const theMontes={
         features:[
             {
                 name:{title:'area'},
-                number:1,
+                number:`235m2`,
                 icons:<StraightenIcon className='icons'/>,
             },
             {
                 name:{title:'beds'},
-                number:1,
-                icons:<StraightenIcon className='icons'/>,
+                number:3,
+                icons:<BedIcon className='icons'/>,
             },
             {
                 name:{title:'baths'},
-                number:1,
-                icons:<StraightenIcon className='icons'/>,
+                number:2,
+                icons:<BathtubIcon className='icons'/>,
             },
             {
                 name:{title:'floors'},
                 number:1,
-                icons:<StraightenIcon className='icons'/>,
+                icons:<OtherHousesIcon className='icons'/>,
             },
             {
-                name:{title:'garages'},
-                number:1,
-                icons:<StraightenIcon className='icons'/>,
+                name:{title:'car parking'},
+                number:2,
+                icons:<DirectionsCarFilledIcon className='icons'/>,
             },
         ],
 

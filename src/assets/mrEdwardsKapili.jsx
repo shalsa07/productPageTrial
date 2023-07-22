@@ -13,6 +13,9 @@ import BedOutlinedIcon from '@mui/icons-material/BedOutlined';
 import DeckOutlinedIcon from '@mui/icons-material/DeckOutlined';
 import DoorBackIcon from '@mui/icons-material/DoorBack';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
+
+import StraightenIcon from '@mui/icons-material/Straighten';
+
 import state from './stateManagement/store';
 
 const mrEdwardsKapili={
@@ -104,6 +107,34 @@ const mrEdwardsKapili={
     },
 
     productText:{
+        features:[
+            {
+                name:{title:'area'},
+                number:`366m2`,
+                icons:<StraightenIcon className='icons'/>,
+            },
+            {
+                name:{title:'beds'},
+                number:4,
+                icons:<StraightenIcon className='icons'/>,
+            },
+            {
+                name:{title:'baths'},
+                number:4,
+                icons:<StraightenIcon className='icons'/>,
+            },
+            {
+                name:{title:'floors'},
+                number:1,
+                icons:<StraightenIcon className='icons'/>,
+            },
+            {
+                name:{title:'car parking'},
+                number:2,
+                icons:<StraightenIcon className='icons'/>,
+            },
+        ],
+
         projectTitle:{
             title:`Four Bedroom house`
         },
@@ -117,7 +148,7 @@ const mrEdwardsKapili={
         },
     
         specialFeatures:{
-            title:`4 Bedrooms, a Helper's Bedroom and Shower, Breakfast - nook, Media-room, Scullary, formal dining, Office space, outdoor seating and entertainment area, and an airy kitchen. 
+            title:`Noteable Features: 4 Bedrooms, a Helper's Bedroom and Shower, Breakfast - nook, Media-room, Scullary, formal dining, Office space, outdoor seating and entertainment area, and an airy kitchen. 
         `},
     
         houseSpaces:[

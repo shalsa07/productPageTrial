@@ -112,31 +112,31 @@
             align-items: start;
             gap: 20px;
 
+            @media screen and (max-width: $appwidth_567) {
+                flex-direction: column;
+                width: calc(100% - 20px);
+            }
+            
+
             .modelPage_desc_details{
                 flex: 2 0;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: start;
+                
+                @media screen and (max-width:$appwidth_567) {
+                    // width: calc(100% - 40px);
+                    position: relative;
+                    left: 0;right: 0;
+                    margin: 0 auto;
+                    justify-content: center;
+                }
 
                 .modelPage_desc_intro{
                     display: flex;
                     flex-direction: column;
                     flex: 1;
-    
-                    .modelPage_desc_keytFeatures{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex: 1 0 100px;
-                        width: 100%;
-                        border-radius: 8px;
-                        margin: 20px 0;
-                        -webkit-box-shadow: $-webkit-box-shadow-thin;
-                        -moz-box-shadow: $-moz-box-shadow-thin;
-                        box-shadow: $box-shadow-thin;
-                        // background-color: red;
-                    }
                 }
 
                 .modelPage_desc_detail_wrap{
@@ -170,6 +170,14 @@
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
+
+                @media screen and (max-width:$appwidth_567) {
+                    // width: calc(100% - 40px);
+                    position: relative;
+                    left: 0;right: 0;
+                    margin: 0 auto;
+                    justify-content: center;
+                }
 
                 .modelPage_desc_downloads_container{
                     position: relative;
