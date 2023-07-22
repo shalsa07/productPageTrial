@@ -1,16 +1,196 @@
 @import '../../../Global.module.scss';
 .footer{
-    width: $appwidth_968;
-    height: 80px;
+    width: 100%;
+    height: 160px;
+    // height: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: relative;
-    // padding-top: 20px;
     background-color: $elementsBackgroundColor;
-    left: 0;right: 0;margin: 0 auto;
+    margin: 0;
+    padding-bottom: 20px;
 
-    @media screen and (max-width:$appwidth_567) {
-        width: calc(100% - 20px);
+    
+    @media screen and (max-width:$appwidth_567){
+        height: auto;
+    }
+
+    
+    .footer_section_title{
+        flex: 1;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: 600;
+        // width: 100%;
+    }
+
+    .footer_wrapper{
+        width: $appwidth_968;
+        position: relative;
+        left: 0;right: 0;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        gap: 40px;
+        height: 100%;
+
+        @media screen and (max-width:$appwidth_567){
+            flex-direction: column;
+            width: calc(100% - 20px);
+            gap: 30px;
+        }
+    
+        .footer_logo{
+            flex: 1;
+            position: relative;
+            left: 0;right: 0;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+
+            .footer_socials_wrapper{
+                height: 40px;
+                flex: 1;
+                display: flex;
+                margin: 0;
+                width: 100%;
+                gap: 20px;
+                justify-content: center;
+                align-items: center;
+
+                .socials{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            .footer_logo_text{
+                flex: 1;
+                font-size: 18px;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                margin: 0;
+                font-weight: 500;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                margin: 0;
+            }
+
+            .footer_logo_outro{
+                flex: 1;
+                font-size: 14px;
+                margin: 0;
+                text-align: justify;
+                font-weight: 200;
+            }
+        }
+
+        .footer_usefullLinks{
+           flex: 1; 
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+           height: 100%;
+
+
+           .footer_usefullLinks_Links{
+                flex: 4;
+                display: flex;
+                // flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                flex-direction: column;
+
+
+                .footer_links{
+                    flex: 1%;
+                    display: flex;
+                    list-style: none;
+                    align-self: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                    // display: inline;
+                }
+           }
+        }
+
+        .footer_contactDetails{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            flex-direction: column;
+
+            .footer_contactDetails_title{
+                flex: 1;
+            }
+
+            .footer_contactDetails_details{
+                flex: 4;
+                width: 100%;
+
+                .footer_contactDetails_details_item{
+                    display: flex;
+                    flex: 1;
+                    align-items: center;    
+                    justify-content: center;
+                    gap: 5px;
+                    width: 100%;
+
+                    .footer_contactDetails_details_item_icon{
+                        width: 20px;
+                        height: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    span{margin-left: 10px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        font-weight: 200;
+                    }
+
+                }
+
+                .footer_contactDetails_paymentRoutes{
+                    display: flex;
+                    flex: 1;
+                    align-items: center;    
+                    justify-content: center;
+                    gap: 5px;
+                    width: 100%;
+
+                    p{margin-left: 10px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        font-weight: 200;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+
+        }
     }
 }
