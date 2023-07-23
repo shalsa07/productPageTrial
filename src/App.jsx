@@ -9,7 +9,7 @@ import ModelPage from './assets/components/modelPage/ModelPage'
 import NavBar from './assets/components/navBar/NavBar'
 import Footer from './assets/components/footer/Footer'
 import { mrEdwardsKapili } from './assets/mrEdwardsKapili'
-import HeroSection from './assets/components/heroSection/HeroSection'
+import HeroSectionParallax from './assets/components/HeroSectionParallax/HeroSectionParallax'
 
 // import Ar from './assets/components/worldCpmponents/Ar'
 const Ar=React.lazy(()=>{
@@ -59,7 +59,7 @@ function App() {
             <Suspense><Experience/></Suspense>
           </div>
           : <><ModelPage/><Footer/></>} */}
-        <HeroSection/>
+        <HeroSectionParallax/>
         <Footer/>
       </Suspense>
     </AppContext.Provider>
