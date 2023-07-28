@@ -32,7 +32,7 @@ const World=React.lazy(()=>{
 })
 
 let productSource=[]
-productSource=mrEdwardsKapili
+productSource=theMontes
 
 function App() {
   const snap=useSnapshot(state)
@@ -47,7 +47,7 @@ function App() {
       <Suspense>
         {snap.popup && <Popup/>}
         <NavBar/>
-        {/* {snap.fullSrcn 
+        {snap.fullSrcn 
           ? <div 
               className="webglWrap_Fullscrn"
               onDoubleClick={()=>{
@@ -58,8 +58,8 @@ function App() {
             >
             <Suspense><Experience/></Suspense>
           </div>
-          : <><ModelPage/><Footer/></>} */}
-        <HeroSectionParallax/>
+          : <><ModelPage/><Footer/></>}
+        {/* <HeroSectionParallax/> */}
         <Footer/>
       </Suspense>
     </AppContext.Provider>
