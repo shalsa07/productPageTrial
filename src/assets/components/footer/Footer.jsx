@@ -19,7 +19,7 @@ const Footer = () => {
     <div className='footer'>
       <div className="footer_wrapper">
         <div className="footer_logo">
-          <span className='footer_logo_text'>luyaridesigns</span>
+          {/* <span className='footer_logo_text'>luyaridesigns</span> */}
           <span className='footer_logo_outro'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati consequuntur quia, ratione consequatur libero fugit velit odit.</span>
           <div className="footer_socials_wrapper">
             <div className="socials downloadsContact_whatsap">
@@ -43,9 +43,9 @@ const Footer = () => {
           <span className="footer_section_title">usefull links</span>
           <ul className="footer_usefullLinks_Links">
             <li className="footer_links">home</li>
-            <li className="footer_links">home</li>
-            <li className="footer_links">home</li>
-            <li className="footer_links">home</li>
+            <li className="footer_links">categories</li>
+            <li className="footer_links">features</li>
+            {/* <li className="footer_links">home</li> */}
           </ul>
         </div>
         <div className="footer_contactDetails">
@@ -61,7 +61,7 @@ const Footer = () => {
               <div className="footer_contactDetails_details_item_icon">
                 <LocalPhoneOutlinedIcon className='icons'/>
               </div>
-              <span>(267)74308319</span>
+              <span>(267)74139977</span>
             </div>
             <div className="footer_contactDetails_details_item">
               <div className="footer_contactDetails_details_item_icon">

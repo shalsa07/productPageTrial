@@ -60,7 +60,7 @@ function App() {
           </div>
           : <><ModelPage/><Footer/></>}
         {/* <HeroSectionParallax/> */}
-        <Footer/>
+        {/* <Footer/> */}
       </Suspense>
     </AppContext.Provider>
   )

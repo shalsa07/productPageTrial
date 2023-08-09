@@ -116,6 +116,7 @@
                 margin: 0;
                 padding: 0;
                 flex-direction: column;
+                padding: 0;
 
 
                 .footer_links{
@@ -125,7 +126,9 @@
                     align-self: center;
                     justify-content: center;
                     cursor: pointer;
-                    font-weight: 400;
+                    font-weight: 600;
+                    font-size: 12px;
+                    padding: 20px 0;
                     text-transform: capitalize;
                     // display: inline;
                 }

@@ -9,7 +9,7 @@ const NavBar = () => {
     <div className='navBar'>
       <div className="navBar_wrapper">
         <SearchLanguage/>
-        <Logo/>
+        {/* <Logo/> */}
         <div className="useDetails_wrapper"><UserDetails/></div>
       </div>
     </div>

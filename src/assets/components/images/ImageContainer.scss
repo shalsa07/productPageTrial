@@ -1,4 +1,5 @@
 .images{
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -9,4 +10,22 @@
         scale: 1.15;
         filter: brightness(.85);
     }
+}
+
+.image_skeleton{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(119, 119, 119);
+  overflow: hidden;
+  z-index: 120;
+  animation: skeleton 1s ease infinite;
+}
+
+@keyframes skeleton{
+  to{
+      opacity: .5;
+  }
 }

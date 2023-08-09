@@ -44,7 +44,7 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
-
+        position: relative;
     }
 
     .rowImage{
@@ -56,5 +56,19 @@
         gap: 10px;
         // background-color: rgb(28, 0, 128);
         overflow: hidden;
+    }
+}
+
+.image_wrapsectionWrapSkeleton{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(119, 119, 119);
+    overflow: hidden;
+    animation: skeleton 1s ease infinite;
+}
+
+@keyframes skeleton{
+    to{
+        opacity: .5;
     }
 }

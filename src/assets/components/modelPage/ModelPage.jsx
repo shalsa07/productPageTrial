@@ -17,6 +17,7 @@ import Footer from '../footer/Footer'
 // })
 
 import SectionWrap from '../sectionWrap/SectionWrap'
+import SectionWrapSkeleton from '../sectionWrap/SectionWrapSkeleton'
 // const SectionWrap=React.lazy(()=>{
 //   return import('../sectionWrap/SectionWrap')
 // })
